@@ -1,0 +1,363 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        let link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+
+        <section class="slide-topic">
+            <h1 class="slide-topic__header"> How to work with </h1>
+            <span class="slide-topic__image"></span>
+        </section>
+
+        <section class="slide-about-me">
+            <p>Hi, I'm Nodira :) </p>
+            <a href="https://www.facebook.com/nodira.ibragimova.71" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/NodiraDeveloper" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com/NodiraIbrogimova" target="_blank">
+                <i class="fab fa-github-alt"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/nodira-ibragimova/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+        </section>
+
+        <section class="slide-gift-question">
+            <section>
+                <p>Question</p>
+            </section>
+
+            <section>Who invented Git?</section>
+
+            <section>Linus Torvalds in 2005 for development of the Linux kernel</section>
+        </section>
+
+        <section data-markdown>
+            <h3>Learning Objectives</h3>
+
+            <ul>
+                <li>Overview</li>
+                <li>Getting a Remote Repository
+                    <ul>
+                        <li>Adding new things</li>
+                    </ul>
+                </li>
+                <li>Making changes</li>
+                <li>Branching</li>
+                <li>Merging</li>
+                <li>Rebasing</li>
+            </ul>
+        </section>
+
+
+        <section class="slide-overview">
+            <section>
+                <h2>Overview</h2>
+                <p>Git is a distributed
+                    <mark>version-control system</mark>
+                    for tracking changes in source code during software
+                    development
+                </p>
+                <p>Learn git
+                    <mark>concepts</mark>
+                    , not
+                    <mark>commands</mark>
+                </p>
+            </section>
+
+            <section>
+                <aside class="notes">
+                    Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you
+                    open the speaker notes window (hit »S« on your keyboard).
+                </aside>
+                <span class="slide-overview__image-1"></span></section>
+
+        </section>
+
+
+        <section class="slide-getting-remote-repo">
+
+            <section><h2>Getting a Remote Repository</h2></section>
+
+            <section>
+                <p>The
+                    <mark>Remote Repository</mark>
+                    is where you send your changes when you want to share them with other
+                    people, and
+                    where you
+                    <mark>get their changes from</mark>
+                </p>
+                <p>The
+                    <mark>Development Environment</mark>
+                    is what you have on your
+                    <mark>local machine</mark>
+                </p>
+            </section>
+
+            <section>
+                <span class="slide-getting-remote-repo__image-2"></span>
+            </section>
+
+            <section>
+                <h3>Adding new things</h3>
+                <span class="slide-getting-remote-repo__image-1"></span>
+            </section>
+
+            <section>
+                <span class="slide-adding-new-things__image-1"></span>
+            </section>
+
+            <section>
+                <span class="slide-adding-new-things__image-2"></span>
+            </section>
+
+            <section>
+                <span class="slide-adding-new-things__image-3"></span>
+            </section>
+
+            <section>
+                <span class="slide-adding-new-things__image-4"></span>
+            </section>
+
+            <section>
+                <span class="slide-adding-new-things__image-5"></span>
+            </section>
+
+            <section>
+                <ul class="commit-list-message">
+                    <li><b>git commit</b></li>
+                    <li></li>
+                    <li>OR</li>
+                    <li></li>
+                    <li><b>git commit -m "learn-git-concepts/feat: add students list text file"</b></li>
+                </ul>
+            </section>
+
+            <section>
+                <span class="slide-adding-new-things__image-6"></span>
+            </section>
+
+            <section>
+
+                <p><b>git push</b></p>
+
+                <span class="slide-adding-new-things__image-7"></span>
+            </section>
+
+            <section>
+                <span class="slide-adding-new-things__image-8"></span>
+            </section>
+
+            <section>
+                <span class="slide-adding-new-things__image-9"></span>
+            </section>
+        </section>
+
+
+        <section class="slide-making-changes">
+
+            <section>
+                <h3>Making changes</h3>
+                <span class="slide-making-changes__image-1"></span>
+            </section>
+
+            <section>
+                <span class="slide-making-changes__image-2"></span>
+            </section>
+
+            <section>
+                <ul>
+                    <li>git add mentors.txt</li>
+                    <li class="fragment fade-in-then-out">OR</li>
+                    <li class="fragment fade-in-then-semi-out">git add .</li>
+                    <li class="fragment highlight-red">git diff</li>
+                    <li class="fragment fade-in-then-out">We can see that output is empty!</li>
+                    <li class="fragment highlight-green">git diff --staged</li>
+                </ul>
+            </section>
+
+            <section>
+                <span class="slide-making-changes__image-3"></span>
+            </section>
+
+            <section>
+                <span>If we run</span>
+                <pre>
+                    <code data-trim data-noescape>
+  Nodiras-MBP:learn-git-concepts nns$ git status
+                     </code>
+                </pre>
+                <p class="fragment fade-in-then-out">We can see the ...</p>
+                <p class="fragment fade-in-then-out">We can see the output for the one we already staged: where we
+                    added
+                    text in
+                    <mark>mentors.txt</mark>
+                </p>
+            </section>
+
+            <section>
+                <p>Every commit in git has a unique hash by which it is referenced.</p>
+                <span>git log:  <mark>hash,</mark><mark> Author,</mark> <mark> Date</mark> and <mark>the state of our <i>Local Repository</i> and the latest local information about <i>remote branches</i></mark></span>
+                <span class="slide-making-changes__image-4"></span>
+            </section>
+
+            <section>
+                <span class="slide-making-changes__note">Note that the actual commit hashes will be different for you.</span>
+            </section>
+
+            <section>
+                <span>To compare that commit and the one one before we can do <mark>git diff (commit)^!</mark>, where the <mark>^!</mark>
+                    tells git to compare to the commit one before. </span>
+                <br/><span><b>OR </b><mark>git diff (from commit) (to commit)</mark></span>
+                <span class="slide-making-changes__image-5"></span>
+            </section>
+
+            <section>
+                <h3>Different stages of a change</h3>
+                <span class="slide-making-changes__image-6"></span>
+            </section>
+
+        </section>
+
+
+        <section class="slide-branching">
+
+            <section>
+                <h3>Branching</h3>
+                <span class="slide-branching__image-1"></span>
+            </section>
+
+            <section>
+                <span>git checkout -b (branchname)</span>
+                <span class="slide-branching__image-2"></span>
+            </section>
+
+            <section>
+                <span class="slide-branching__image-3"></span>
+            </section>
+
+            <section>
+                <span class="slide-branching__image-4"></span>
+            </section>
+
+            <section>
+                <p>git push origin remove-students</p>
+                <span class="slide-branching__image-5"></span>
+            </section>
+
+        </section>
+
+
+        <section class="slide-merging-and-rebasing">
+
+            <section>
+                <div class="slide-merging">
+                    <h3>Merging</h3>
+                    <ul>
+                        <li>Fast forward merging</li>
+                        <li>Divergent branches merging</li>
+                    </ul>
+                    <p>A merge introduces a merge commit in which the two histories get integrated
+                        again.</p>
+                </div>
+                <div class="slide-rebasing">
+                    <h3>Rebasing</h3>
+                    <p>Another clean way to integrate changes between two branches. Viewed simply,
+                        rebasing just changes the point in history (the commit) your branch is based on.</p>
+                </div>
+            </section>
+
+            <section>
+                <p>Fast-Forward merging</p>
+                <span class="slide-merging-and-rebasing__image-ff-merge"></span>
+            </section>
+
+            <section class="flex-section">
+                <p>Merging divergent branches</p>
+                <span class="slide-merging-and-rebasing__image-db-merge-1"></span>
+            </section>
+
+            <section>
+                <span class="slide-merging-and-rebasing__image-db-merge-2"></span>
+            </section>
+
+            <section>
+                <p>Rebasing branches</p>
+                <span class="slide-merging-and-rebasing__image-rebasing-1"></span>
+            </section>
+
+            <section>
+                <span class="slide-merging-and-rebasing__image-rebasing-2"></span>
+            </section>
+
+        </section>
+
+        <section class="slide-questions">
+            <p>Questions?</p>
+            <h2>&#128519;</h2>
+        </section>
+
+
+        <section>
+            <a href="https://www.linkedin.com/pulse/10-health-benefits-clapping-surprise-you-dr-hashmi/"
+               target="_blank" class="clap-health-benefits">Health benefits of clapping that will surprise you</a>
+            <!--            <h2>&#129321;</h2>-->
+        </section>
+
+        <section class="slide-thank-you">
+            <h2>Thank You</h2>
+        </section>
+
+    </div>
+</div>
+
+<script src="js/reveal.js"></script>
+
+
+<script>
+
+    Reveal.initialize();
+
+</script>
+<script>
+    Reveal.initialize({
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {src: 'plugin/highlight/highlight.js', async: true}
+        ]
+    });
+</script>
+</body>
+</html>
