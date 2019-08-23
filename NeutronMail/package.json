@@ -1,0 +1,19 @@
+{
+  "name": "neutronmail",
+  "version": "1.0.0",
+  "description": "A new email service being developed by a group from MIT and CERN promises to bring secure, encrypted email",
+  "main": "no",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/NodiraIbrogimova-2019-UZ.git"
+  },
+  "author": "Nodira Ibrogimova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/NodiraIbrogimova-2019-UZ/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/NodiraIbrogimova-2019-UZ#readme"
+}
