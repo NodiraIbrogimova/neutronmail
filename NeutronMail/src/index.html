@@ -9,23 +9,101 @@
 
 <div class="wrapper">
     <header>
-        <div class="header-nav"></div>
-        <div class="header-languages"></div>
+        <div class="header-navbar">
+
+            <div class="flex-container">
+                <div class="header-navbar__left flex-container">
+                    <img class="logo" src="assets/icons/logo.png">
+                </div>
+
+                <div class="header-navbar__right flex-container">
+                    <nav class="flex-container">
+                        <ul class="flex-container">
+                            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Security</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Support</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Donate</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="header-navbar__right__auth-buttons">
+                        <a href="#">
+                            Sign In
+                        </a>
+                        <a href="#">
+                            Log In
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-navbar__languages">
+                <ul class="flex-container">
+                    <li class="nav-item"><a href="#" class="nav-link">English</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">French</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Italian</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Polish</a></li>
+                </ul>
+            </div>
+        </div>
 
         <div class="header-main-content">
             <h1>Secure Email Communication</h1>
             <h2>Based in <span class="text-red">Somewhere</span></h2>
+
+            <div class="header-main-content__buttons">
+                <a href="#" class="header-main-content__buttons__create-account">Create account</a>
+                <a href="#">
+                    <span class="header-main-content__buttons__create-account"></span>
+                </a>
+                <a href="#">
+                    <span class="header-main-content__buttons__create-account"></span>
+                </a>
+            </div>
         </div>
     </header>
 
     <main>
 
-        <section>
-            <article>
-                <div class='row'>
+        <section class="section-services">
+            <div class="row center">
 
+                <div class="column">
+                    <div class="media">
+                        <img class="d-flex align-self-center" src="assets/icons/swiss-privacy-icon.png"
+                             alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h2 class="mt-0">Swiss Privacy</h2>
+                            <p class="mb-0">Data Security and Neutrality</p>
+                        </div>
+                    </div>
                 </div>
-            </article>
+
+                <div class="column">
+                    <div class="media">
+                        <img class="d-flex align-self-center" src="assets/icons/double-encryption-icon.png"
+                             alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h2 class="mt-0">Double Encryption</h2>
+                            <p class="mb-0">Automatic Email Security</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="media">
+                        <img class="d-flex align-self-center" src="assets/icons/anonymous-email-icon.png"
+                             alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h2 class="mt-0">Anonymous Email</h2>
+                            <p class="mb-0">Protect Your Privacy</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
 

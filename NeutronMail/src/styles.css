@@ -1,3 +1,5 @@
+@import "styles/helper-styles.css";
+
 .wrapper {
     max-width: 1400px;
     margin: 0 auto;
@@ -6,29 +8,53 @@
     flex-direction: column;
 }
 
-.text-red {
-    color: #fc2028;
-}
-
-/* helper classes for grid layout */
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-}
-
-/* end helper classes for grid layout */
-
-
 /* Header styles */
+header {
+    background: transparent url("assets/images/home-background.png") no-repeat center center;
+    width: 100%;
+    height: 100vh;
+}
+
+.header-navbar {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-navbar .header-navbar__left {
+
+}
+
+.header-navbar .header-navbar__right {
+    flex-grow: 2;
+}
+
+.header-navbar .header-navbar__right nav {
+    align-items: center;
+    flex-grow: 2;
+    justify-content: flex-end;
+}
+
+.header-navbar .header-navbar__right nav ul {
+    flex-basis: 50%;
+    justify-content: space-around;
+    margin: 0 40px;
+}
+
+.header-navbar .header-navbar__right__auth-buttons {
+    align-items: center;
+    flex-grow: 0.1;
+    justify-content: space-around;
+}
+
+.header-navbar .header-navbar__languages {
+    flex-grow: 1;
+}
+
+.header-navbar .header-navbar__languages ul {
+    justify-content: flex-start;
+    padding: 0;
+}
+
 .header-main-content h2 {
     color: #464646;
     font-family: "Titillium Web";
@@ -41,8 +67,57 @@
 /* End Header styles */
 
 
-/* footer styles */
+/* Services section styles */
+.section-services {
 
+}
+
+.section-services .row {
+    max-width: 75%;
+}
+
+/*  End Services section styles */
+
+
+/* Media objects styles */
+.media {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.media .media-body {
+    flex: 1;
+}
+
+.media .media-body img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.media .media-body h2 {
+    font-family: "Titillium Web";
+    font-weight: 400;
+    color: #555555;
+    font-size: 30px;
+    letter-spacing: 0.3px;
+    line-height: 37px;
+    margin-block-end: 0;
+}
+
+.media .media-body p {
+    color: #959393;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.18px;
+    line-height: 22px;
+    margin-block-start: 0;
+}
+
+/* End Media objects styles */
+
+
+/* footer styles */
 footer {
     margin-top: auto;
 }
