@@ -4,7 +4,9 @@
   "description": "A new email service being developed by a group from MIT and CERN promises to bring secure, encrypted email",
   "main": "no",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,19 @@
   "bugs": {
     "url": "https://github.com/rolling-scopes-school/NodiraIbrogimova-2019-UZ/issues"
   },
-  "homepage": "https://github.com/rolling-scopes-school/NodiraIbrogimova-2019-UZ#readme"
+  "homepage": "https://github.com/rolling-scopes-school/NodiraIbrogimova-2019-UZ#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  }
 }

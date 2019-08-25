@@ -2,6 +2,7 @@
 node_modules
 *.bundle.js
 *.log
+**/.DS_Store
 **/presentation/
 **/custom-lodash-tests/
 **/layout/
