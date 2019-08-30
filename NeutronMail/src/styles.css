@@ -8,7 +8,11 @@
     flex-direction: column;
 }
 
-/* Header styles */
+/*
+ ::::::::::::::::::::::::::::::::::::::::::::::::::::
+ Header styles
+ ::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
 header {
     background: transparent url("assets/images/home-background.png") no-repeat center center;
     width: 100%;
@@ -16,12 +20,19 @@ header {
 }
 
 .header-navbar {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
-.header-navbar .header-navbar__left {
-
+.header-navbar .header-navbar__left .logo {
+    background-image: url("assets/icons/logo.png");
+    display: flex;
+    align-self: center;
+    width: 157px;
+    height: 22px;
+    background-size: cover;
+    background-position: center;
 }
 
 .header-navbar .header-navbar__right {
@@ -36,8 +47,17 @@ header {
 
 .header-navbar .header-navbar__right nav ul {
     flex-basis: 50%;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 0 40px;
+}
+
+.header-navbar .header-navbar__right .nav-item .nav-link {
+    color: #454545;
+    font-family: "Titillium Web";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0.16px;
 }
 
 .header-navbar .header-navbar__right__auth-buttons {
@@ -46,8 +66,38 @@ header {
     justify-content: space-around;
 }
 
+.header-navbar .header-navbar__right__auth-buttons li:nth-child(1) .nav-link {
+    font-family: "Titillium Web";
+    font-weight: 700;
+    letter-spacing: 0.16px;
+    color: #454545;
+    margin: auto 10px;
+}
+
+.fa-sign-in-alt {
+    color: #582c7e;
+    padding-right: 5px;
+}
+
+.header-navbar .header-navbar__right__auth-buttons li:nth-child(2) .nav-link {
+    color: #ffffff;
+    font-family: "Titillium Web";
+    font-weight: 700;
+    letter-spacing: 0.16px;
+    padding: 10px 16px;
+    background-color: #582c7e;
+    border-radius: 50px;
+    margin: auto 10px;
+}
+
+.header-navbar .header-navbar__right__auth-buttons .flex-container {
+    padding-inline-start: 0;
+}
+
 .header-navbar .header-navbar__languages {
     flex-grow: 1;
+    margin-block-start: -50px;
+    margin-block-end: 50px;
 }
 
 .header-navbar .header-navbar__languages ul {
@@ -55,35 +105,132 @@ header {
     padding: 0;
 }
 
+.header-navbar .header-navbar__languages .nav-item .nav-link {
+    color: #959595;
+    font-family: "Titillium Web";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0.14px;
+}
+
+.header-navbar .header-navbar__languages .nav-item .nav-link:active,
+.header-navbar .header-navbar__languages .nav-item .nav-link:visited {
+    font-weight: 700;
+    letter-spacing: 0.14px;
+    border-bottom: #647397;
+    opacity: 0.41;;
+}
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Header Main content styles
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
+.header-main-content {
+    text-align: center;
+}
+
+h1 {
+    opacity: 0.84;
+    color: #454545;
+    font-family: "Titillium Web - Semi Bold";
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    margin-block-end: 0;
+}
+
 .header-main-content h2 {
+    opacity: 0.84;
     color: #464646;
     font-family: "Titillium Web";
     font-size: 36px;
     font-weight: 400;
     letter-spacing: 0.36px;
     line-height: 56px;
+    margin-block-start: 0;
 }
+
+.header-main-content .header-main-content__buttons .header-main-content__buttons__create-account {
+    background-color: #603971;
+    color: #ffffff;
+    font-family: "Titillium Web";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.18px;
+    border-radius: 50px;
+    padding: 0px 60px;
+    text-decoration: none;
+}
+
+.header-main-content .header-main-content__buttons a:not(:first-child) {
+    /*border: 1px solid red;*/
+    padding: 0 0 0 10px;
+}
+
+.header-main-content .header-main-content__buttons .header-main-content__buttons__app-store,
+.header-main-content .header-main-content__buttons .header-main-content__buttons__google-products {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header-main-content .header-main-content__buttons .header-main-content__buttons__app-store {
+    background-image: url("assets/icons/google-products-icon.png");
+}
+
+.header-main-content .header-main-content__buttons .header-main-content__buttons__google-products {
+    background-image: url("assets/icons/apple-icon.png");
+}
+
+/* End Header Main content styles */
 
 /* End Header styles */
 
 
-/* Services section styles */
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Services section styles
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
 .section-services {
 
 }
 
+.section-services .column .media-description {
+    color: #959393;
+    font-family: "Titillium Web";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.14px;
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
 .section-services .row {
-    max-width: 75%;
+    max-width: 80vw;
 }
 
 /*  End Services section styles */
 
 
-/* Media objects styles */
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Media objects styles
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
 .media {
     display: flex;
     align-items: flex-start;
     box-sizing: border-box;
+    height: 65px;
 }
 
 .media .media-body {
@@ -116,10 +263,176 @@ header {
 
 /* End Media objects styles */
 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Section-physical-security styles
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
 
-/* footer styles */
-footer {
+.section-physical-security .row {
+    max-width: 80vw;
+}
+
+.section-physical-security .row .col-2 {
+    text-align: right;
+}
+
+.section-physical-security .col-2 h2 {
+    color: #535353;
+    font-family: "Titillium Web";
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.6px;
+    margin-block-end: 0;
+    padding-left: 40px;
+    padding-right: 30px;
+}
+
+
+.section-physical-security .col-2 p {
+    color: #959393;
+    font-family: "Titillium Web";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.24px;
+    padding-left: 40px;
+    padding-right: 30px;
+}
+
+/* end styles section-physical-security*/
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+section-partners-and-sponsors
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
+.section-testimonials {
+    display: flex;
+
+}
+
+.section-testimonials .section-testimonials__customers-block {
+    background-image: url("assets/icons/testimonials-list.png");
+    height: 66px;
+    width: 60vw;
+}
+
+/* end styles for section-partners-and-sponsors*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+footer styles
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
+.footer-block {
     margin-top: auto;
 }
 
+.footer-block .row .column {
+    align-items: flex-end;
+}
+
+.footer-block > div {
+    margin-top: 0;
+    width: 80%;
+    border: 1px solid red;
+}
+
+.footer-block .footer-block__partners-list {
+    background-image: url("assets/icons/partners-icons.png");
+    width: 50vw;
+    height: 92px;
+    margin-left: auto;
+    opacity: 0.76;
+}
+
+.footer-block .row .footer-block__links ul,
+.footer-block .row .footer-block__company-info ul,
+.footer-block .row .footer-block__legal-info ul,
+.footer-block .row .footer-block__neutronmail-info ul {
+    padding-inline-start: 0;
+}
+
+.footer-block .row .footer-block__links ul li,
+.footer-block .row .footer-block__company-info ul li,
+.footer-block .row .footer-block__legal-info ul li,
+.footer-block .row .footer-block__neutronmail-info ul li {
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.footer-block .row .footer-block__links ul li span,
+.footer-block .row .footer-block__company-info ul li span,
+.footer-block .row .footer-block__legal-info ul li span,
+.footer-block .row .footer-block__neutronmail-info ul li span {
+    color: red;
+    font-size: 4px;
+    vertical-align: middle;
+}
+
 /* end footer styles */
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+M E D I A  Q U E R I E S
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+*/
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .hidden-sm {
+        display: none;
+    }
+
+    .header-navbar__right__auth-buttons .flex-container {
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .header-navbar .header-navbar__right__auth-buttons {
+        align-items: center;
+        flex-grow: 2;
+        justify-content: space-around;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+    .header-navbar {
+        width: 100%;
+    }
+
+    .section-services .row {
+        max-width: 100%;
+    }
+}
+
+/*  Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+
+/* End Media queries styles*/
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (max-width: 768px) {
+
+
+}

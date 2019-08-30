@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Neutron Mail Website</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
 </head>
 <body>
 
@@ -13,11 +14,11 @@
 
             <div class="flex-container">
                 <div class="header-navbar__left flex-container">
-                    <img class="logo" src="assets/icons/logo.png">
+                    <span class="logo"></span>
                 </div>
 
                 <div class="header-navbar__right flex-container">
-                    <nav class="flex-container">
+                    <nav class="flex-container hidden-sm">
                         <ul class="flex-container">
                             <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">Security</a></li>
@@ -29,12 +30,12 @@
                     </nav>
 
                     <div class="header-navbar__right__auth-buttons">
-                        <a href="#">
-                            Sign In
-                        </a>
-                        <a href="#">
-                            Log In
-                        </a>
+                        <ul class="flex-container">
+                            <li class="nav-item"><a href="#" class="nav-link">
+                                <i class="fas fa-sign-in-alt"></i>Log in</a>
+                            </li>
+                            <li class="nav-item"><a href="#" class="nav-link">Sign up</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -54,13 +55,20 @@
             <h2>Based in <span class="text-red">Somewhere</span></h2>
 
             <div class="header-main-content__buttons">
-                <a href="#" class="header-main-content__buttons__create-account">Create account</a>
-                <a href="#">
-                    <span class="header-main-content__buttons__create-account"></span>
+                <a href="#" class="btn header-main-content__buttons__create-account">
+                    <!--                    <button class="btn">-->
+                    Create account
+                    <!--                    </button>-->
                 </a>
-                <a href="#">
-                    <span class="header-main-content__buttons__create-account"></span>
+
+                <a href="#" class="btn">
+                    <span class="header-main-content__buttons__google-products"></span>
                 </a>
+
+                <a href="#" class="btn">
+                    <span class="header-main-content__buttons__app-store"></span>
+                </a>
+
             </div>
         </div>
     </header>
@@ -79,6 +87,11 @@
                             <p class="mb-0">Data Security and Neutrality</p>
                         </div>
                     </div>
+
+                    <p class="media-description">NeutronMail is incorporated in Somewhere and all our servers are
+                        located in Switzerland. This
+                        means all user data is
+                        protected by strict Swiss privacy laws.</p>
                 </div>
 
                 <div class="column">
@@ -90,6 +103,11 @@
                             <p class="mb-0">Automatic Email Security</p>
                         </div>
                     </div>
+                    <p class="media-description">
+                        All emails are secured automatically with end-to-end encryption. This means even we cannot
+                        decrypt and read your emails. As a result, your encrypted emails cannot
+                        be shared with third parties.
+                    </p>
                 </div>
 
                 <div class="column">
@@ -101,17 +119,111 @@
                             <p class="mb-0">Protect Your Privacy</p>
                         </div>
                     </div>
+                    <p class="media-description">
+                        No personal information is required to create your secure email account. By default, we do
+                        not keep any IP logs which can be linked to your anonymous email account. Your privacy comes
+                        first.
+                    </p>
                 </div>
 
             </div>
         </section>
 
 
+        <section class="section-physical-security">
+            <div class="row center">
+
+                <div class="col-2">
+                    <h2>Physical Security</h2>
+                    <p>NeutronMail's infrastructure resides in Europe's <span class="text-red">most secure</span>
+                        datacenter, underneath 1000 meters of solid rock.</p>
+                </div>
+                <div class="column"></div>
+
+            </div>
+
+            <div class="row">
+                <div class="column">button</div>
+            </div>
+
+        </section>
+
+
+        <section class="section-testimonials">
+
+            <span class="span-image section-testimonials__customers-block"></span>
+
+
+        </section>
+
     </main>
 
 
-    <footer>
-        footer
+    <footer class="footer-block">
+        <div>
+            <span class="span-image footer-block__partners-list"></span>
+
+            <div class="row">
+                <div class="column">
+                    <section>
+                        <div class="footer-block__general-info">
+                            <p class="text-gray--5c">General: <span class="_700">contact@neutronmail.ch</span></p>
+                            <p class="text-gray--5c">Media: <span class="_700">media@neutronmail.ch</span></p>
+                            <p class="text-gray--5c"> Security: <span class="_700">security@neutronmail.ch</span></p>
+                            <p class="text-gray--5c">For support inquiries, please visit</p>
+                            <p class="text-gray--5c"><span class="_700">neutronmail.com/support</span></p>
+                        </div>
+
+                        <div class="footer-block__links">
+                            <ul class="flex-container">
+                                <li class="nav-item"><a href="#" class="nav-link">English</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">French</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Italian</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Polish</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="column">
+                    <section class="footer-block__company-info text-align-end">
+                        <h4>Company</h4>
+                        <ul>
+                            <li>Blog<span>&#9608;</span></li>
+                            <li>Team<span>&#9608;</span></li>
+                            <li>Careers<span>&#9608;</span></li>
+                            <li>Support<span>&#9608;</span></li>
+                            <li>Donate<span>&#9608;</span></li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="column">
+                    <section class="footer-block__legal-info text-align-end">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li>Imprint<span>&#9608;</span></li>
+                            <li>Privacy Policy<span>&#9608;</span></li>
+                            <li>Terms & Conditions<span>&#9608;</span></li>
+                            <li>Report Abuse<span>&#9608;</span></li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="column">
+                    <section class="footer-block__neutronmail-info text-align-end">
+                        <h4>NeutronMail</h4>
+                        <ul>
+                            <li>Pricing<span>&#9608;</span></li>
+                            <li>Security<span>&#9608;</span></li>
+                            <li>Shop<span>&#9608;</span></li>
+                            <li>Press/Media Kit<span>&#9608;</span></li>
+                            <li>Onion Site<span>&#9608;</span></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
     </footer>
 </div>
 
