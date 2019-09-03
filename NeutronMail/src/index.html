@@ -8,46 +8,42 @@
 </head>
 <body>
 
-<div class="wrapper">
+<div class="grid container">
     <header>
+
         <div class="header-navbar">
 
-            <div class="flex-container">
-                <div class="header-navbar__left flex-container">
-                    <span class="logo"></span>
-                </div>
+            <div class="grid header-navbar__links-group">
+                <span class="header-navbar__links-group__logo"></span>
 
-                <div class="header-navbar__right flex-container">
-                    <nav class="flex-container hidden-sm">
-                        <ul class="flex-container">
-                            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Security</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Support</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Donate</a></li>
-                        </ul>
-                    </nav>
+                <nav class="hidden-sm">
+                    <ul>
+                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Security</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Support</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Donate</a></li>
+                    </ul>
+                </nav>
 
-                    <div class="header-navbar__right__auth-buttons">
-                        <ul class="flex-container">
-                            <li class="nav-item"><a href="#" class="nav-link">
-                                <i class="fas fa-sign-in-alt"></i>Log in</a>
-                            </li>
-                            <li class="nav-item"><a href="#" class="nav-link">Sign up</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <ul class="header-navbar__links-group__buttons hidden-xs">
+                    <li class="nav-item"><a href="#" class="nav-link">
+                        <i class="fas fa-sign-in-alt"></i>Log in</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sign up</a></li>
+                </ul>
             </div>
 
             <div class="header-navbar__languages">
-                <ul class="flex-container">
+                <ul>
                     <li class="nav-item"><a href="#" class="nav-link">English</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">French</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Italian</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Polish</a></li>
                 </ul>
             </div>
+
         </div>
 
         <div class="header-main-content">
@@ -56,9 +52,7 @@
 
             <div class="header-main-content__buttons">
                 <a href="#" class="btn header-main-content__buttons__create-account">
-                    <!--                    <button class="btn">-->
                     Create account
-                    <!--                    </button>-->
                 </a>
 
                 <a href="#" class="btn">
@@ -71,159 +65,133 @@
 
             </div>
         </div>
+
     </header>
 
     <main>
+        <section class="grid section-services">
+            <div class="section-services__top-left-border"></div>
 
-        <section class="section-services">
-            <div class="row center">
-
-                <div class="column">
-                    <div class="media">
-                        <img class="d-flex align-self-center" src="assets/icons/swiss-privacy-icon.png"
-                             alt="Generic placeholder image">
-                        <div class="media-body">
-                            <h2 class="mt-0">Swiss Privacy</h2>
-                            <p class="mb-0">Data Security and Neutrality</p>
-                        </div>
-                    </div>
-
-                    <p class="media-description">NeutronMail is incorporated in Somewhere and all our servers are
-                        located in Switzerland. This
-                        means all user data is
-                        protected by strict Swiss privacy laws.</p>
-                </div>
-
-                <div class="column">
-                    <div class="media">
-                        <img class="d-flex align-self-center" src="assets/icons/double-encryption-icon.png"
-                             alt="Generic placeholder image">
-                        <div class="media-body">
-                            <h2 class="mt-0">Double Encryption</h2>
-                            <p class="mb-0">Automatic Email Security</p>
-                        </div>
-                    </div>
-                    <p class="media-description">
-                        All emails are secured automatically with end-to-end encryption. This means even we cannot
-                        decrypt and read your emails. As a result, your encrypted emails cannot
-                        be shared with third parties.
-                    </p>
-                </div>
-
-                <div class="column">
-                    <div class="media">
-                        <img class="d-flex align-self-center" src="assets/icons/anonymous-email-icon.png"
-                             alt="Generic placeholder image">
-                        <div class="media-body">
-                            <h2 class="mt-0">Anonymous Email</h2>
-                            <p class="mb-0">Protect Your Privacy</p>
-                        </div>
-                    </div>
-                    <p class="media-description">
-                        No personal information is required to create your secure email account. By default, we do
-                        not keep any IP logs which can be linked to your anonymous email account. Your privacy comes
-                        first.
-                    </p>
-                </div>
-
+            <div class="grid section-services__swiss-privacy__header">
+                <span></span>
+                <h2>Swiss Privacy</h2>
+                <p>Data Security and Neutrality</p>
             </div>
+
+            <div class="grid section-services__double-encryption__header">
+                <span></span>
+                <h2>Double Encryption</h2>
+                <p>Automatic Email Security</p>
+            </div>
+
+            <div class="grid section-services__anonymous-email__header">
+                <span></span>
+                <h2>Anonymous Email</h2>
+                <p>Protect Your Privacy</p>
+            </div>
+
+            <div class="section-services__swiss-privacy__main">
+                <p>NeutronMail is incorporated in Somewhere and all our servers are located in Switzerland. This means
+                    all user data is
+                    protected by strict Swiss privacy laws.</p>
+            </div>
+
+            <div class="section-services__double-encryption__main">
+                <p>All emails are secured automatically with end-to-end encryption. This means even we cannot decrypt
+                    and read your emails. As a result, your encrypted emails cannot
+                    be shared with third parties.</p>
+            </div>
+
+            <div class="section-services__anonymous-email__main">
+                <p>No personal information is required to create your secure email account. By default, we do not keep
+                    any IP logs which can be linked to your anonymous email account. Your privacy comes first.</p>
+            </div>
+
+            <div class="section-services__middle-border"></div>
+
+            <div class="section-services__bottom-text">
+                <h2>Physical Security</h2>
+                <p>NeutronMail's infrastructure resides in Europe's <span class="text-red">most secure</span>
+                    datacenter, underneath 1000 meters of
+                    solid rock.</p>
+            </div>
+            <a href="#" class="btn btn--learn-more">Learn more about the security features</a>
         </section>
 
+        <span class="span-image section-testimonials__customers-block"></span>
 
-        <section class="section-physical-security">
-            <div class="row center">
-
-                <div class="col-2">
-                    <h2>Physical Security</h2>
-                    <p>NeutronMail's infrastructure resides in Europe's <span class="text-red">most secure</span>
-                        datacenter, underneath 1000 meters of solid rock.</p>
-                </div>
-                <div class="column"></div>
-
-            </div>
-
-            <div class="row">
-                <div class="column">button</div>
-            </div>
-
-        </section>
-
-
-        <section class="section-testimonials">
-
-            <span class="span-image section-testimonials__customers-block"></span>
-
-
+        <section class="section-customers">
+            <span class="section-customers__block"></span>
         </section>
 
     </main>
 
 
     <footer class="footer-block">
-        <div>
-            <span class="span-image footer-block__partners-list"></span>
+        <!--        <div>-->
+        <!--            <span class="span-image footer-block__partners-list"></span>-->
 
-            <div class="row">
-                <div class="column">
-                    <section>
-                        <div class="footer-block__general-info">
-                            <p class="text-gray--5c">General: <span class="_700">contact@neutronmail.ch</span></p>
-                            <p class="text-gray--5c">Media: <span class="_700">media@neutronmail.ch</span></p>
-                            <p class="text-gray--5c"> Security: <span class="_700">security@neutronmail.ch</span></p>
-                            <p class="text-gray--5c">For support inquiries, please visit</p>
-                            <p class="text-gray--5c"><span class="_700">neutronmail.com/support</span></p>
-                        </div>
+        <!--            <div class="row">-->
+        <!--                <div class="column">-->
+        <!--                    <section>-->
+        <!--                        <div class="footer-block__general-info">-->
+        <!--                            <p class="text-gray&#45;&#45;5c">General: <span class="_700">contact@neutronmail.ch</span></p>-->
+        <!--                            <p class="text-gray&#45;&#45;5c">Media: <span class="_700">media@neutronmail.ch</span></p>-->
+        <!--                            <p class="text-gray&#45;&#45;5c"> Security: <span class="_700">security@neutronmail.ch</span></p>-->
+        <!--                            <p class="text-gray&#45;&#45;5c">For support inquiries, please visit</p>-->
+        <!--                            <p class="text-gray&#45;&#45;5c"><span class="_700">neutronmail.com/support</span></p>-->
+        <!--                        </div>-->
 
-                        <div class="footer-block__links">
-                            <ul class="flex-container">
-                                <li class="nav-item"><a href="#" class="nav-link">English</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">French</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">Italian</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">Polish</a></li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
+        <!--                        <div class="footer-block__links">-->
+        <!--                            <ul class="flex-container">-->
+        <!--                                <li class="nav-item"><a href="#" class="nav-link">English</a></li>-->
+        <!--                                <li class="nav-item"><a href="#" class="nav-link">French</a></li>-->
+        <!--                                <li class="nav-item"><a href="#" class="nav-link">Italian</a></li>-->
+        <!--                                <li class="nav-item"><a href="#" class="nav-link">Polish</a></li>-->
+        <!--                            </ul>-->
+        <!--                        </div>-->
+        <!--                    </section>-->
+        <!--                </div>-->
 
-                <div class="column">
-                    <section class="footer-block__company-info text-align-end">
-                        <h4>Company</h4>
-                        <ul>
-                            <li>Blog<span>&#9608;</span></li>
-                            <li>Team<span>&#9608;</span></li>
-                            <li>Careers<span>&#9608;</span></li>
-                            <li>Support<span>&#9608;</span></li>
-                            <li>Donate<span>&#9608;</span></li>
-                        </ul>
-                    </section>
-                </div>
+        <!--                <div class="column">-->
+        <!--                    <section class="footer-block__company-info text-align-end">-->
+        <!--                        <h4>Company</h4>-->
+        <!--                        <ul>-->
+        <!--                            <li>Blog<span>&#9608;</span></li>-->
+        <!--                            <li>Team<span>&#9608;</span></li>-->
+        <!--                            <li>Careers<span>&#9608;</span></li>-->
+        <!--                            <li>Support<span>&#9608;</span></li>-->
+        <!--                            <li>Donate<span>&#9608;</span></li>-->
+        <!--                        </ul>-->
+        <!--                    </section>-->
+        <!--                </div>-->
 
-                <div class="column">
-                    <section class="footer-block__legal-info text-align-end">
-                        <h4>Legal</h4>
-                        <ul>
-                            <li>Imprint<span>&#9608;</span></li>
-                            <li>Privacy Policy<span>&#9608;</span></li>
-                            <li>Terms & Conditions<span>&#9608;</span></li>
-                            <li>Report Abuse<span>&#9608;</span></li>
-                        </ul>
-                    </section>
-                </div>
+        <!--                <div class="column">-->
+        <!--                    <section class="footer-block__legal-info text-align-end">-->
+        <!--                        <h4>Legal</h4>-->
+        <!--                        <ul>-->
+        <!--                            <li>Imprint<span>&#9608;</span></li>-->
+        <!--                            <li>Privacy Policy<span>&#9608;</span></li>-->
+        <!--                            <li>Terms & Conditions<span>&#9608;</span></li>-->
+        <!--                            <li>Report Abuse<span>&#9608;</span></li>-->
+        <!--                        </ul>-->
+        <!--                    </section>-->
+        <!--                </div>-->
 
-                <div class="column">
-                    <section class="footer-block__neutronmail-info text-align-end">
-                        <h4>NeutronMail</h4>
-                        <ul>
-                            <li>Pricing<span>&#9608;</span></li>
-                            <li>Security<span>&#9608;</span></li>
-                            <li>Shop<span>&#9608;</span></li>
-                            <li>Press/Media Kit<span>&#9608;</span></li>
-                            <li>Onion Site<span>&#9608;</span></li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-        </div>
+        <!--                <div class="column">-->
+        <!--                    <section class="footer-block__neutronmail-info text-align-end">-->
+        <!--                        <h4>NeutronMail</h4>-->
+        <!--                        <ul>-->
+        <!--                            <li>Pricing<span>&#9608;</span></li>-->
+        <!--                            <li>Security<span>&#9608;</span></li>-->
+        <!--                            <li>Shop<span>&#9608;</span></li>-->
+        <!--                            <li>Press/Media Kit<span>&#9608;</span></li>-->
+        <!--                            <li>Onion Site<span>&#9608;</span></li>-->
+        <!--                        </ul>-->
+        <!--                    </section>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
     </footer>
 </div>
 

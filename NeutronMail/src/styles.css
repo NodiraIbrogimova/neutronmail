@@ -1,11 +1,19 @@
 @import "styles/helper-styles.css";
 
-.wrapper {
-    max-width: 1400px;
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
     margin: 0 auto;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+    height: 100vh;
+    max-width: 1400px;
+    grid-template-rows: auto 1fr auto;
+}
+
+a {
+    text-decoration: none;
 }
 
 /*
@@ -23,11 +31,47 @@ header {
     width: 80%;
     margin: 0 auto;
     box-sizing: border-box;
+    margin-block-start: 2em;
 }
 
-.header-navbar .header-navbar__left .logo {
+.header-navbar .header-navbar__links-group {
+    grid-template-columns: minmax(140px, 158px) 1fr minmax(150px, 250px);
+    grid-template-rows: 1fr;
+    grid-area: links-group;
+}
+
+.header-navbar .header-navbar__links-group nav {
+    justify-self: end;
+}
+
+.header-navbar .header-navbar__links-group nav ul {
+    justify-content: space-evenly;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.header-navbar .header-navbar__links-group nav ul .nav-item .nav-link {
+    color: #454545;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0.16px;
+}
+
+.header-navbar .header-navbar__links-group__buttons li,
+.header-navbar .header-navbar__links-group nav li {
+    display: inline-block;
+}
+
+.header-navbar .header-navbar__links-group__buttons {
+    align-self: center;
+    justify-self: end;
+    justify-content: space-around;
+}
+
+.header-navbar .header-navbar__links-group__logo {
     background-image: url("assets/icons/logo.png");
-    display: flex;
     align-self: center;
     width: 157px;
     height: 22px;
@@ -35,93 +79,72 @@ header {
     background-position: center;
 }
 
-.header-navbar .header-navbar__right {
-    flex-grow: 2;
-}
-
-.header-navbar .header-navbar__right nav {
-    align-items: center;
-    flex-grow: 2;
-    justify-content: flex-end;
-}
-
-.header-navbar .header-navbar__right nav ul {
-    flex-basis: 50%;
-    justify-content: space-evenly;
-    margin: 0 40px;
-}
-
-.header-navbar .header-navbar__right .nav-item .nav-link {
-    color: #454545;
-    font-family: "Titillium Web";
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 56px;
-    letter-spacing: 0.16px;
-}
-
-.header-navbar .header-navbar__right__auth-buttons {
-    align-items: center;
-    flex-grow: 0.1;
-    justify-content: space-around;
-}
-
-.header-navbar .header-navbar__right__auth-buttons li:nth-child(1) .nav-link {
-    font-family: "Titillium Web";
+.header-navbar .header-navbar__links-group__buttons li:nth-child(1) .nav-link {
+    font-family: "Titillium Web", sans-serif;
     font-weight: 700;
     letter-spacing: 0.16px;
     color: #454545;
     margin: auto 10px;
 }
 
-.fa-sign-in-alt {
+.header-navbar .header-navbar__links-group__buttons .fa-sign-in-alt {
     color: #582c7e;
     padding-right: 5px;
 }
 
-.header-navbar .header-navbar__right__auth-buttons li:nth-child(2) .nav-link {
+.header-navbar .header-navbar__links-group .header-navbar__links-group__buttons li:nth-child(2) .nav-link {
     color: #ffffff;
-    font-family: "Titillium Web";
+    font-family: "Titillium Web", sans-serif;
     font-weight: 700;
     letter-spacing: 0.16px;
     padding: 10px 16px;
     background-color: #582c7e;
     border-radius: 50px;
-    margin: auto 10px;
-}
-
-.header-navbar .header-navbar__right__auth-buttons .flex-container {
-    padding-inline-start: 0;
-}
-
-.header-navbar .header-navbar__languages {
-    flex-grow: 1;
-    margin-block-start: -50px;
-    margin-block-end: 50px;
+    margin: auto 0 10px 10px;
 }
 
 .header-navbar .header-navbar__languages ul {
-    justify-content: flex-start;
     padding: 0;
+    margin-block-start: -20px;
+    margin-block-end: 0;
 }
 
-.header-navbar .header-navbar__languages .nav-item .nav-link {
+.header-navbar .header-navbar__languages ul .nav-item {
+    display: inline-block;
+}
+
+.header-navbar .header-navbar__languages ul .nav-item .nav-link {
     color: #959595;
-    font-family: "Titillium Web";
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 56px;
     letter-spacing: 0.14px;
+
 }
 
-.header-navbar .header-navbar__languages .nav-item .nav-link:active,
-.header-navbar .header-navbar__languages .nav-item .nav-link:visited {
+.header-navbar .header-navbar__languages ul .nav-item .nav-link:hover,
+.header-navbar .header-navbar__languages ul .nav-item .nav-link :visited {
     font-weight: 700;
     letter-spacing: 0.14px;
     border-bottom: #647397;
-    opacity: 0.41;;
+    opacity: 0.41;
+    background-color: red;
+    color: red;
+    text-shadow: none;
 }
 
+.header-navbar .header-navbar__languages ul li:nth-child(1):after,
+.header-navbar .header-navbar__languages ul li:nth-child(2):after,
+.header-navbar .header-navbar__languages ul li:nth-child(3):after {
+    padding-left: 5px;
+    content: '/';
+    color: #959595;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 56px;
+}
 
 /*
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -135,8 +158,8 @@ Header Main content styles
 h1 {
     opacity: 0.84;
     color: #454545;
-    font-family: "Titillium Web - Semi Bold";
-    font-size: 60px;
+    font-family: "Titillium Web - Semi Bold", sans-serif;
+    font-size: 3.75rem;
     font-weight: 600;
     letter-spacing: 0.6px;
     margin-block-end: 0;
@@ -145,7 +168,7 @@ h1 {
 .header-main-content h2 {
     opacity: 0.84;
     color: #464646;
-    font-family: "Titillium Web";
+    font-family: "Titillium Web", sans-serif;
     font-size: 36px;
     font-weight: 400;
     letter-spacing: 0.36px;
@@ -156,18 +179,16 @@ h1 {
 .header-main-content .header-main-content__buttons .header-main-content__buttons__create-account {
     background-color: #603971;
     color: #ffffff;
-    font-family: "Titillium Web";
+    font-family: "Titillium Web", sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 56px;
     letter-spacing: 0.18px;
     border-radius: 50px;
     padding: 0px 60px;
-    text-decoration: none;
 }
 
 .header-main-content .header-main-content__buttons a:not(:first-child) {
-    /*border: 1px solid red;*/
     padding: 0 0 0 10px;
 }
 
@@ -200,84 +221,211 @@ Services section styles
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
  */
 .section-services {
+    grid-template-columns: 2.4fr 2.1fr 2.4fr;
+    grid-template-rows: 100px auto auto 100px auto auto;
+    margin-block-start: 0;
+    position: relative;
+    /*grid-template-areas: ". top-left-border ."*/
+    /*                     "swiss-privacy-header double-encryption-header anonymous-email-header";*/
+    /*                     "swiss-privacy-main double-encryption-main anonymous-email-main"*/
+    /*                     ". double-encryption-main ."*/
+    /*                     ". middle-border ."*/
+    /*                     "bottom-text bottom-text ."*/
+}
+
+.section-services .section-services__top-left-border {
+    border-left: 2px solid #b9b9b9;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    /*grid-area: top-left-border;*/
+}
+
+.section-services .section-services__swiss-privacy__header {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-content: center;
+    padding-right: 34px;
+    position: relative;
+    /*grid-area: swiss-privacy-header;*/
+}
+
+.section-services .section-services__swiss-privacy__header:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    z-index: 100;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    margin-right: -2px;
+    background: #b9b9b9;
+}
+
+.section-services .section-services__double-encryption__header {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: start;
+    padding-left: 34px;
+    /*grid-area: double-encryption-header;*/
+}
+
+.section-services .section-services__anonymous-email__header {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    position: relative;
+    justify-content: start;
+    padding-left: 34px;
+    /*grid-area: anonymous-email-header;*/
+}
+
+.section-services .section-services__anonymous-email__header:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    z-index: 100;
+    top: 0;
+    width: 30%;
+    height: 2px;
+    background: #b9b9b9;
+}
+
+.section-services .section-services__swiss-privacy__header,
+.section-services .section-services__double-encryption__header,
+.section-services .section-services__anonymous-email__header {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+}
+
+.section-services .section-services__swiss-privacy__header span,
+.section-services .section-services__double-encryption__header span,
+.section-services .section-services__anonymous-email__header span {
+    grid-row: span 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.section-services .section-services__swiss-privacy__header span,
+.section-services .section-services__double-encryption__header span,
+.section-services .section-services__anonymous-email__header span {
+    width: 60px;
+    height: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section-services .section-services__swiss-privacy__header span {
+    background-image: url("assets/icons/swiss-privacy-icon.png");
+}
+
+.section-services .section-services__double-encryption__header span {
+    background-image: url("assets/icons/double-encryption-icon.png");
+}
+
+.section-services .section-services__anonymous-email__header span {
+    background-image: url("assets/icons/anonymous-email-icon.png");
+}
+
+.section-services .section-services__swiss-privacy__header h2,
+.section-services .section-services__double-encryption__header h2,
+.section-services .section-services__anonymous-email__header h2 {
+
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    color: #555555;
+    font-size: 2.25rem;
+    letter-spacing: 0.3px;
+    line-height: 37px;
+    margin-block-start: 0;
+    margin-block-end: 0;
 
 }
 
-.section-services .column .media-description {
+.section-services .section-services__swiss-privacy__header p,
+.section-services .section-services__double-encryption__header p,
+.section-services .section-services__anonymous-email__header p {
+    font-family: "Titillium Web", sans-serif;
     color: #959393;
-    font-family: "Titillium Web";
+    font-size: 18px;
+    letter-spacing: 0.18px;
+    line-height: 22px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.section-services .section-services__swiss-privacy__main p,
+.section-services .section-services__double-encryption__main p,
+.section-services .section-services__anonymous-email__main p {
+    color: #959393;
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: 0.14px;
-    padding-left: 20px;
-    padding-right: 15px;
 }
 
-.section-services .row {
-    max-width: 80vw;
+.section-services .section-services__swiss-privacy__main p {
+    max-width: 358px;
+    padding-left: 2.125rem;
+    padding-right: 2.125rem;
 }
 
-/*  End Services section styles */
-
-
-/*
-::::::::::::::::::::::::::::::::::::::::::::::::::::
-Media objects styles
-::::::::::::::::::::::::::::::::::::::::::::::::::::
- */
-.media {
-    display: flex;
-    align-items: flex-start;
-    box-sizing: border-box;
-    height: 65px;
+.section-services .section-services__double-encryption__main p {
+    max-width: 340px;
+    padding-left: 2.8125rem;
 }
 
-.media .media-body {
-    flex: 1;
+.section-services .section-services__anonymous-email__main p {
+    max-width: 363px;
+    padding-left: 3.125rem;
+    padding-right: 2.125rem;
 }
 
-.media .media-body img {
-    vertical-align: middle;
-    border-style: none;
+.section-services .section-services__swiss-privacy__main {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-inline-start: auto;
+    /*grid-area: swiss-privacy-main;*/
 }
 
-.media .media-body h2 {
-    font-family: "Titillium Web";
-    font-weight: 400;
-    color: #555555;
-    font-size: 30px;
-    letter-spacing: 0.3px;
-    line-height: 37px;
-    margin-block-end: 0;
+.section-services .section-services__double-encryption__main {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    border-right: 2px solid #b9b9b9;
+    margin-right: -2px;
+    /*grid-area: double-encryption-main;*/
 }
 
-.media .media-body p {
-    color: #959393;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 0.18px;
-    line-height: 22px;
-    margin-block-start: 0;
+.section-services .section-services__anonymous-email__main {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    /*grid-area: anonymous-email-main;*/
 }
 
-/* End Media objects styles */
-
-/*
-::::::::::::::::::::::::::::::::::::::::::::::::::::
-Section-physical-security styles
-::::::::::::::::::::::::::::::::::::::::::::::::::::
- */
-
-.section-physical-security .row {
-    max-width: 80vw;
+.section-services .section-services__middle-border {
+    grid-row: 4/5;
+    grid-column: 2/3;
+    border-right: 2px solid #b9b9b9;
+    margin-right: -2px;
+    /*grid-area: middle-border;*/
 }
 
-.section-physical-security .row .col-2 {
+.section-services .section-services__bottom-text {
+    grid-row: 5/6;
+    grid-column: 1/3;
+    border-right: 2px solid #b9b9b9;
+    margin-right: -2px;
+    border-bottom: 2px solid #b9b9b9;
+    /*grid-area: bottom-text;*/
+}
+
+.section-services .section-services__bottom-text h2,
+.section-services .section-services__bottom-text p {
     text-align: right;
+    padding-right: 40px;
 }
 
-.section-physical-security .col-2 h2 {
+.section-services .section-services__bottom-text h2 {
     color: #535353;
     font-family: "Titillium Web";
     font-size: 60px;
@@ -285,21 +433,67 @@ Section-physical-security styles
     line-height: 22px;
     letter-spacing: 0.6px;
     margin-block-end: 0;
-    padding-left: 40px;
-    padding-right: 30px;
 }
 
-
-.section-physical-security .col-2 p {
+.section-services .section-services__bottom-text p {
     color: #959393;
     font-family: "Titillium Web";
     font-size: 24px;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: 0.24px;
-    padding-left: 40px;
-    padding-right: 30px;
+    max-width: 622px;
+    margin-inline-start: auto;
+    margin-block-end: 2em;
 }
+
+.section-services .btn--learn-more {
+    position: absolute;
+    bottom: -5%;
+    right: 25%;
+    color: #676767;
+    font-family: "Titillium Web";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.16px;
+    border-radius: 31px;
+    border: 1px solid #b9b9b9;
+    background-color: #ffffff;
+    padding: 15px 30px;
+}
+
+/*  End Services section styles */
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Section customers block styles
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
+.section-customers {
+    margin-block-start: 60px;
+    margin-block-end: 60px;
+}
+
+.section-customers .section-customers__block {
+    background-image: url("assets/icons/testimonials-list.png");
+    height: 66px;
+    max-width: 50%;
+    display: block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+/* Section customers block styles */
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Section-physical-security styles
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
 
 /* end styles section-physical-security*/
 
@@ -309,16 +503,6 @@ Section-physical-security styles
 section-partners-and-sponsors
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
  */
-.section-testimonials {
-    display: flex;
-
-}
-
-.section-testimonials .section-testimonials__customers-block {
-    background-image: url("assets/icons/testimonials-list.png");
-    height: 66px;
-    width: 60vw;
-}
 
 /* end styles for section-partners-and-sponsors*/
 
@@ -327,51 +511,51 @@ section-partners-and-sponsors
 footer styles
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
  */
-.footer-block {
-    margin-top: auto;
-}
+/*.footer-block {*/
+/*    margin-top: auto;*/
+/*}*/
 
-.footer-block .row .column {
-    align-items: flex-end;
-}
+/*.footer-block .row .column {*/
+/*    align-items: flex-end;*/
+/*}*/
 
-.footer-block > div {
-    margin-top: 0;
-    width: 80%;
-    border: 1px solid red;
-}
+/*.footer-block > div {*/
+/*    margin-top: 0;*/
+/*    width: 80%;*/
+/*    border: 1px solid red;*/
+/*}*/
 
-.footer-block .footer-block__partners-list {
-    background-image: url("assets/icons/partners-icons.png");
-    width: 50vw;
-    height: 92px;
-    margin-left: auto;
-    opacity: 0.76;
-}
+/*.footer-block .footer-block__partners-list {*/
+/*    background-image: url("assets/icons/partners-icons.png");*/
+/*    width: 50vw;*/
+/*    height: 92px;*/
+/*    margin-left: auto;*/
+/*    opacity: 0.76;*/
+/*}*/
 
-.footer-block .row .footer-block__links ul,
-.footer-block .row .footer-block__company-info ul,
-.footer-block .row .footer-block__legal-info ul,
-.footer-block .row .footer-block__neutronmail-info ul {
-    padding-inline-start: 0;
-}
+/*.footer-block .row .footer-block__links ul,*/
+/*.footer-block .row .footer-block__company-info ul,*/
+/*.footer-block .row .footer-block__legal-info ul,*/
+/*.footer-block .row .footer-block__neutronmail-info ul {*/
+/*    padding-inline-start: 0;*/
+/*}*/
 
-.footer-block .row .footer-block__links ul li,
-.footer-block .row .footer-block__company-info ul li,
-.footer-block .row .footer-block__legal-info ul li,
-.footer-block .row .footer-block__neutronmail-info ul li {
-    list-style-type: none;
-    list-style-position: inside;
-}
+/*.footer-block .row .footer-block__links ul li,*/
+/*.footer-block .row .footer-block__company-info ul li,*/
+/*.footer-block .row .footer-block__legal-info ul li,*/
+/*.footer-block .row .footer-block__neutronmail-info ul li {*/
+/*    list-style-type: none;*/
+/*    list-style-position: inside;*/
+/*}*/
 
-.footer-block .row .footer-block__links ul li span,
-.footer-block .row .footer-block__company-info ul li span,
-.footer-block .row .footer-block__legal-info ul li span,
-.footer-block .row .footer-block__neutronmail-info ul li span {
-    color: red;
-    font-size: 4px;
-    vertical-align: middle;
-}
+/*.footer-block .row .footer-block__links ul li span,*/
+/*.footer-block .row .footer-block__company-info ul li span,*/
+/*.footer-block .row .footer-block__legal-info ul li span,*/
+/*.footer-block .row .footer-block__neutronmail-info ul li span {*/
+/*    color: red;*/
+/*    font-size: 4px;*/
+/*    vertical-align: middle;*/
+/*}*/
 
 /* end footer styles */
 
@@ -382,57 +566,299 @@ M E D I A  Q U E R I E S
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 */
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .header-navbar {
+        width: 90%;
+    }
+
+    .header-navbar .header-navbar__links-group nav ul .nav-item .nav-link,
+    .header-navbar .header-navbar__links-group .header-navbar__links-group__buttons .nav-item .nav-link {
+        font-size: 12px;
+    }
+
+    .header-navbar .header-navbar__links-group nav ul {
+        margin-inline-start: 0;
+    }
+
+    .header-navbar .header-navbar__links-group {
+        grid-template-columns: minmax(140px, 158px) 1fr minmax(150px, 230px);
+    }
+
+    .section-services {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto 15px;
+    }
+
+    .section-services .section-services__swiss-privacy__header {
+        justify-content: start;
+        padding-right: 0;
+    }
+
+    .section-services .section-services__double-encryption__header span {
+        padding-right: 15px;
+    }
+
+    .section-services .section-services__anonymous-email__header {
+        padding-left: 0;
+    }
+
+    .section-services .section-services__double-encryption__header {
+        padding-left: 0;
+    }
+
+    .section-services .section-services__swiss-privacy__header p,
+    .section-services .section-services__double-encryption__header p,
+    .section-services .section-services__anonymous-email__header p {
+        font-size: 15px;
+    }
+
+    .section-services .section-services__swiss-privacy__header h2,
+    .section-services .section-services__double-encryption__header h2,
+    .section-services .section-services__anonymous-email__header h2 {
+        font-size: 25px;
+    }
+
+    .section-services .section-services__swiss-privacy__main p {
+        padding-right: 15px;
+    }
+
+    .section-services .section-services__double-encryption__main p {
+        padding-left: 0;
+    }
+
+    .section-services .section-services__anonymous-email__main p {
+        padding-left: 15px;
+    }
+
+    .section-services .section-services__bottom-text h2 {
+        font-size: 45px;
+    }
+
+    .section-services .section-services__bottom-text p {
+        font-size: 18px;
+    }
+
+    .section-customers .section-customers__block {
+        max-width: 55%;
+    }
+
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px), (min-width: 320px) and (max-width: 480px) {
     .hidden-sm {
         display: none;
     }
 
-    .header-navbar__right__auth-buttons .flex-container {
-        align-items: center;
-        justify-content: flex-end;
-    }
-
-    .header-navbar .header-navbar__right__auth-buttons {
-        align-items: center;
-        flex-grow: 2;
-        justify-content: space-around;
-    }
-}
-
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 768px) {
-
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 767.98px) and (max-width: 991.98px) {
     .header-navbar {
+        width: 90%;
+    }
+
+    .header-navbar .header-navbar__links-group {
+        display: grid;
+        grid-template-columns: minmax(120px, 130px) 1fr;
+        grid-template-rows: 1fr;
+        grid-area: links-group;
+    }
+
+    .header-navbar .header-navbar__links-group__buttons {
+        padding-inline-start: 0;
+        font-size: 12px;
+        justify-self: end;
+    }
+
+    .header-main-content .header-main-content__buttons .header-main-content__buttons__create-account {
+        font-size: 12px;
+        padding: 0px 30px;
+    }
+
+    .section-services {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas: "."
+                            "swiss-privacy-header"
+                            "swiss-privacy-main"
+                            "double-encryption-header"
+                            "double-encryption-main"
+                            "anonymous-email-header"
+                            "anonymous-email-main"
+                            "bottom-text";
+        margin-block-start: 2em;
+        padding-left: 2.125rem;
+        padding-right: 2.125rem;
+        justify-content: start;
+    }
+
+    .section-services .section-services__swiss-privacy__header {
+        grid-area: swiss-privacy-header;
+    }
+
+    .section-services .section-services__double-encryption__header {
+        grid-area: double-encryption-header;
+        border-top: 2px solid #b9b9b9;
         width: 100%;
     }
 
-    .section-services .row {
+    .section-services .section-services__anonymous-email__header {
+        grid-area: anonymous-email-header;
+    }
+
+    .section-services .section-services__anonymous-email__header:after {
+        right: -2px;
+    }
+
+    .section-services .section-services__swiss-privacy__main {
+        grid-area: swiss-privacy-main;
+    }
+
+    .section-services .section-services__double-encryption__main {
+        grid-area: double-encryption-main;
+    }
+
+    .section-services .section-services__anonymous-email__main {
+        grid-area: anonymous-email-main;
+    }
+
+    .section-services .section-services__bottom-text {
+        grid-area: bottom-text;
+    }
+
+    .section-services .section-services__middle-border {
+        margin-right: 0;
+    }
+
+    .section-services .section-services__swiss-privacy__header,
+    .section-services .section-services__double-encryption__header,
+    .section-services .section-services__anonymous-email__header,
+    .section-services .section-services__swiss-privacy__main p,
+    .section-services .section-services__double-encryption__main p,
+    .section-services .section-services__anonymous-email__main p {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .section-services .section-services__swiss-privacy__header,
+    .section-services .section-services__double-encryption__header,
+    .section-services .section-services__anonymous-email__header {
+        justify-content: start;
+    }
+
+    .section-services .section-services__swiss-privacy__header p,
+    .section-services .section-services__double-encryption__header p,
+    .section-services .section-services__anonymous-email__header p {
+        font-size: 14px;
+    }
+
+    .section-services .section-services__swiss-privacy__main p,
+    .section-services .section-services__double-encryption__main p,
+    .section-services .section-services__anonymous-email__main p {
+        max-width: 100%;
+    }
+
+    .section-services .section-services__swiss-privacy__header span,
+    .section-services .section-services__double-encryption__header span,
+    .section-services .section-services__anonymous-email__header span {
+        width: 40px;
+        height: 40px;
+    }
+
+    .section-services .section-services__swiss-privacy__header h2,
+    .section-services .section-services__double-encryption__header h2,
+    .section-services .section-services__anonymous-email__header h2 {
+        font-size: 24px;
+    }
+
+    .section-services .section-services__bottom-text p {
+        font-size: 18px;
+    }
+
+    .section-customers .section-customers__block {
         max-width: 100%;
     }
 }
 
-/*  Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
+@media (min-width: 481px) and (max-width: 767px) {
+    h1 {
+        font-size: 2.8125rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-services .section-services__bottom-text h2 {
+        line-height: 45px;
+    }
 }
-
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {
-}
-
-/* End Media queries styles*/
-
-
 /*
-::::::::::::::::::::::::::::::::::::::::::::::::::::
-Custom media queries
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
 */
 
-/* Set width to make card deck cards 100% width */
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 480px) {
+    .header-main-content {
+        text-align: center;
+        margin-top: 24vw;
+    }
 
+    h1 {
+        font-size: 1.875rem;
+
+    }
+
+    .header-main-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-services .section-services__bottom-text h2 {
+        font-size: 2.5rem;
+        line-height: 30px;
+    }
 
 }
+
+@media (max-width: 360px) {
+    .hidden-xs {
+        display: none;
+    }
+}
+
