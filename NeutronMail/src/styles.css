@@ -1,8 +1,15 @@
 @import "styles/helper-styles.css";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
 
 body {
     padding: 0;
     margin: 0;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
 }
 
 .container {
@@ -120,7 +127,6 @@ header {
     font-weight: 400;
     line-height: 56px;
     letter-spacing: 0.14px;
-
 }
 
 .header-navbar .header-navbar__languages ul .nav-item .nav-link:hover,
@@ -484,7 +490,6 @@ Section customers block styles
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-
 }
 
 /* Section customers block styles */
@@ -511,51 +516,195 @@ section-partners-and-sponsors
 footer styles
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
  */
-/*.footer-block {*/
-/*    margin-top: auto;*/
-/*}*/
 
-/*.footer-block .row .column {*/
-/*    align-items: flex-end;*/
-/*}*/
+footer {
+    background-color: #fafafa;
+}
 
-/*.footer-block > div {*/
-/*    margin-top: 0;*/
-/*    width: 80%;*/
-/*    border: 1px solid red;*/
-/*}*/
+.footer-block {
+    width: 80vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+}
 
-/*.footer-block .footer-block__partners-list {*/
-/*    background-image: url("assets/icons/partners-icons.png");*/
-/*    width: 50vw;*/
-/*    height: 92px;*/
-/*    margin-left: auto;*/
-/*    opacity: 0.76;*/
-/*}*/
+.footer-block .footer-block__top-text {
+    color: #7a7a7a;
+    font-family: "Titillium Web";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0.14px;
+    grid-row: 1/2;
+    justify-self: end;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    width: 100%;
+    text-align: right;
+    border-top: 2px solid #b9b9b9;
+}
 
-/*.footer-block .row .footer-block__links ul,*/
-/*.footer-block .row .footer-block__company-info ul,*/
-/*.footer-block .row .footer-block__legal-info ul,*/
-/*.footer-block .row .footer-block__neutronmail-info ul {*/
-/*    padding-inline-start: 0;*/
-/*}*/
+.footer-block .footer-block__top-text,
+.footer-block .footer-block__top-image {
+    border-right: 2px solid #b9b9b9;
+    padding-right: 25px;
+}
 
-/*.footer-block .row .footer-block__links ul li,*/
-/*.footer-block .row .footer-block__company-info ul li,*/
-/*.footer-block .row .footer-block__legal-info ul li,*/
-/*.footer-block .row .footer-block__neutronmail-info ul li {*/
-/*    list-style-type: none;*/
-/*    list-style-position: inside;*/
-/*}*/
+.footer-block .footer-block__top-image {
+    grid-row: 2/3;
+    justify-self: end;
+}
 
-/*.footer-block .row .footer-block__links ul li span,*/
-/*.footer-block .row .footer-block__company-info ul li span,*/
-/*.footer-block .row .footer-block__legal-info ul li span,*/
-/*.footer-block .row .footer-block__neutronmail-info ul li span {*/
-/*    color: red;*/
-/*    font-size: 4px;*/
-/*    vertical-align: middle;*/
-/*}*/
+.footer-block .footer-block__top-image span {
+    background-image: url("assets/icons/partners-icons.png");
+    display: block;
+    width: 60vw;
+    height: 92px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-block-end: 6.25rem;
+}
+
+.footer-block .footer-block__main {
+    grid-template-rows: auto auto;
+    grid-template-columns: 180px 2fr 1fr 1fr 1fr;
+}
+
+.footer-block .footer-block__main__general-info {
+    font-family: "Titillium Web";
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+    color: #5c5c5c;
+    grid-column: 2/3;
+    padding-left: 25px;
+    border-left: 2px solid #b9b9b9;
+}
+
+.footer-block .footer-block__main__general-info > p {
+    margin-block-start: 0;
+}
+
+.footer-block .footer-block__main__general-info p a {
+    font-weight: 700;
+    color: inherit;
+}
+
+.footer-block .footer-block__main__general-info span {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.footer-block .footer-block__main__company-info,
+.footer-block .footer-block__bottom {
+    border-right: 2px solid #b9b9b9;
+}
+
+.footer-block .footer-block__main__company-info,
+.footer-block .footer-block__main__legal-info,
+.footer-block .footer-block__main__neutronMail-info {
+    text-align: right;
+    padding-right: 25px;
+}
+
+.footer-block .footer-block__main__company-info h2,
+.footer-block .footer-block__main__legal-info h2,
+.footer-block .footer-block__main__neutronMail-info h2 {
+    color: #5c5c5c;
+    font-family: "Titillium Web";
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.18px;
+    margin-block-start: 0;
+}
+
+.footer-block .footer-block__main__neutronMail-info {
+    position: relative;
+}
+
+.footer-block .footer-block__main__neutronMail-info:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    z-index: 100;
+    top: 0;
+    width: 2px;
+    height: 80%;
+    background: #b9b9b9;
+}
+
+
+.footer-block .footer-block__main__company-info ul,
+.footer-block .footer-block__main__legal-info ul,
+.footer-block .footer-block__main__neutronMail-info ul,
+.footer-block .footer-block__bottom__breadcrumbs {
+    padding-inline-start: 0;
+}
+
+.footer-block .footer-block__main__company-info ul li,
+.footer-block .footer-block__main__legal-info ul li,
+.footer-block .footer-block__main__neutronMail-info ul li {
+    list-style-type: none;
+    list-style-position: inside;
+
+    color: #5c5c5c;
+    font-family: "Titillium Web";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+}
+
+.footer-block .footer-block__bottom {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    padding-top: 6.25rem;
+}
+
+
+.footer-block .footer-block__bottom__breadcrumbs li {
+    display: inline-block;
+    color: #5c5c5c;
+    font-family: "Titillium Web";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.12px;
+}
+
+.footer-block .footer-block__bottom__breadcrumbs li span {
+    text-decoration: underline;
+}
+
+.footer-block .footer-block__bottom__breadcrumbs li:nth-child(1):after,
+.footer-block .footer-block__bottom__breadcrumbs li:nth-child(2):after,
+.footer-block .footer-block__bottom__breadcrumbs li:nth-child(3):after,
+.footer-block .footer-block__bottom__breadcrumbs li:nth-child(4):after {
+    padding-left: 5px;
+    content: '/';
+    list-style-type: none;
+    text-decoration: none;
+    letter-spacing: 0.12px;
+}
+
+.footer-block .footer-block__bottom p {
+    color: #5c5c5c;
+    font-family: "Titillium Web";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.12px;
+}
+
+.footer-block .footer-block__main__company-info ul li span,
+.footer-block .footer-block__main__legal-info ul li span,
+.footer-block .footer-block__main__neutronMail-info ul li span {
+    color: #5c5c5c;
+    font-size: 4px;
+    padding-left: 7px;
+    vertical-align: middle;
+}
 
 /* end footer styles */
 
@@ -714,14 +863,7 @@ M E D I A  Q U E R I E S
     .section-services {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, auto);
-        grid-template-areas: "."
-                            "swiss-privacy-header"
-                            "swiss-privacy-main"
-                            "double-encryption-header"
-                            "double-encryption-main"
-                            "anonymous-email-header"
-                            "anonymous-email-main"
-                            "bottom-text";
+        grid-template-areas: "." "swiss-privacy-header" "swiss-privacy-main" "double-encryption-header" "double-encryption-main" "anonymous-email-header" "anonymous-email-main" "bottom-text";
         margin-block-start: 2em;
         padding-left: 2.125rem;
         padding-right: 2.125rem;
@@ -814,6 +956,7 @@ M E D I A  Q U E R I E S
     .section-customers .section-customers__block {
         max-width: 100%;
     }
+
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -828,7 +971,56 @@ M E D I A  Q U E R I E S
     .section-services .section-services__bottom-text h2 {
         line-height: 45px;
     }
+
+    .footer-block {
+        width: 100vw;
+    }
+
+    .footer-block .footer-block__top-image span {
+        margin-block-end: 3.125rem;
+    }
+
+    .footer-block .footer-block__main {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .footer-block .footer-block__main .footer-block__main__general-info {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        border-left: none;
+        border-top: 2px solid #b9b9b9;
+        border-right: 2px solid #b9b9b9;
+        border-bottom: 2px solid #b9b9b9;
+        border-left: none;
+    }
+
+    .footer-block .footer-block__main .footer-block__main__company-info {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .footer-block .footer-block__main .footer-block__main__legal-info {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding-top: 25px;
+    }
+
+    .footer-block .footer-block__main .footer-block__main__neutronMail-info {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding-top: 25px;
+    }
+
+    .footer-block .footer-block__bottom {
+        grid-column: span 2;
+        grid-row: 3/4;
+        padding-top: 3.125rem;
+        padding-left: 25px;
+    }
 }
+
 /*
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
@@ -853,6 +1045,81 @@ M E D I A  Q U E R I E S
         font-size: 2.5rem;
         line-height: 30px;
     }
+
+    .footer-block {
+        width: 100vw;
+    }
+
+    .footer-block .footer-block__top-image span {
+        margin-block-end: 3.125rem;
+    }
+
+    .footer-block .footer-block__main {
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .footer-block .footer-block__main .footer-block__main__general-info {
+        grid-column: span 2;
+        grid-row: 1/2;
+        border-left: none;
+        border-top: 2px solid #b9b9b9;
+        border-right: 2px solid #b9b9b9;
+        border-bottom: 2px solid #b9b9b9;
+        border-left: none;
+        padding-left: 2px;
+    }
+
+    .footer-block .footer-block__main .footer-block__main__company-info {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .footer-block .footer-block__main .footer-block__main__legal-info {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .footer-block .footer-block__main .footer-block__main__neutronMail-info {
+        grid-column: span 1;
+        grid-row: 3/4;
+        padding-top: 25px;
+    }
+
+    .footer-block .footer-block__main__neutronMail-info:after {
+        position: absolute;
+        content: "";
+        right: 0;
+        z-index: 100;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: #b9b9b9;
+    }
+
+
+    .footer-block .footer-block__bottom {
+        grid-column: span 1;
+        grid-row: 3/4;
+        padding-top: 8px;
+        border-right: none;
+        padding-right: 25px;
+        padding-left: 5px;
+    }
+
+    .footer-block .footer-block__main__company-info,
+    .footer-block .footer-block__main__legal-info,
+    .footer-block .footer-block__main__neutronMail-info {
+        padding-left: 5px;
+        text-align: left;
+    }
+
+    .footer-block ul li,
+    .footer-block p {
+        font-size: 12px;
+    }
+
 
 }
 
