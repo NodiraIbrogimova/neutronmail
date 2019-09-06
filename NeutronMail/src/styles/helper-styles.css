@@ -10,8 +10,24 @@
     color: #5c5c5c;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
 ._700 {
     font-weight: 700;
+}
+
+._400 {
+    font-weight: 400;
+}
+
+.max-width-1400 {
+    max-width: 1400px;
 }
 
 .mt-0 {
