@@ -1,0 +1,1523 @@
+@import "styles/normalize.css";
+@import "styles/helper-styles.css";
+@import "styles/fonts.css";
+
+.wrapper {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    grid-template-rows: auto 1fr auto;
+}
+
+.container--fixed-top-right {
+    position: fixed;
+    right: 5px;
+    bottom: 55%;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    z-index: 999;
+}
+
+.container--fixed-top-right a {
+    opacity: 0.82;
+    color: #454545;
+    font-weight: 400;
+    line-height: 37px;
+    letter-spacing: 0.22px;
+}
+
+/*
+ ::::::::::::::::::::::::::::::::::::::::::::::::::::
+ Header styles
+ ::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
+header {
+    background: url("assets/images/home-background.png") no-repeat center center;
+    width: 100%;
+    height: 790px;
+}
+
+.sm-menu-btn {
+    display: none;
+    z-index: 9999;
+}
+
+.header-navbar {
+    max-width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-block-start: 2.7em;
+}
+
+.header-navbar .header-navbar__links-group {
+    grid-template-columns: minmax(140px, 158px) 1fr minmax(150px, 250px);
+    grid-template-rows: 1fr;
+    grid-area: links-group;
+}
+
+.header-navbar .header-navbar__links-group nav {
+
+}
+
+.header-navbar .header-navbar__links-group nav ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(6, auto);
+    max-width: 45%;
+    justify-content: space-evenly;
+    margin-left: auto;
+}
+
+.header-navbar .header-navbar__links-group nav ul li a {
+    color: #454545;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0.16px;
+}
+
+.header-navbar .header-navbar__links-group__buttons li,
+.header-navbar .header-navbar__links-group nav li {
+    display: inline-block;
+}
+
+.header-navbar .header-navbar__links-group__buttons {
+    align-self: center;
+    justify-self: end;
+    justify-content: space-around;
+}
+
+.header-navbar .header-navbar__links-group__logo {
+    background-image: url("assets/icons/logo.png");
+    align-self: center;
+    width: 157px;
+    height: 22px;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-navbar .header-navbar__links-group__buttons li:nth-child(1) .nav-link {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.16px;
+    color: #454545;
+    margin: auto 10px;
+}
+
+.header-navbar .header-navbar__links-group__buttons .fa-sign-in-alt {
+    color: #582c7e;
+    padding-right: 5px;
+}
+
+.header-navbar .header-navbar__links-group .header-navbar__links-group__buttons li:nth-child(2) .nav-link {
+    color: #ffffff;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.16px;
+    padding: 10px 16px;
+    background: linear-gradient(to bottom right, #582c7e, #6277cd);
+    border-radius: 50px;
+    margin: auto 0 10px 10px;
+}
+
+.header-navbar .header-navbar__languages {
+    padding: 0;
+    margin-block-start: -20px;
+    margin-block-end: 0;
+}
+
+.header-navbar .header-navbar__languages .nav-item {
+    display: inline-block;
+}
+
+.header-navbar .header-navbar__languages .nav-item .nav-link {
+    color: #959595;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0.14px;
+}
+
+/*.header-navbar .header-navbar__links-group .nav .nav-item .nav-link:visited,*/
+/*.header-navbar .header-navbar__languages .nav .nav-item .nav-link:visited,*/
+/*.header-navbar .header-navbar__links-group .nav .nav-item .nav-link:active,*/
+/*.header-navbar .header-navbar__languages .nav .nav-item .nav-link:active,*/
+.header-navbar .header-navbar__links-group .nav-item .nav-link:focus,
+.header-navbar .header-navbar__languages .nav-item .nav-link:focus {
+    font-weight: 700;
+    border-bottom: 1px solid #454545;
+}
+
+.header-navbar .header-navbar__languages li:nth-child(1):after,
+.header-navbar .header-navbar__languages li:nth-child(2):after,
+.header-navbar .header-navbar__languages li:nth-child(3):after {
+    padding-left: 5px;
+    content: '/';
+    color: #959595;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 56px;
+}
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Header Main content styles
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
+.header-main-content {
+
+}
+
+h1 {
+    opacity: 0.84;
+    color: #454545;
+    font-family: "Titillium Web - Semi Bold", sans-serif;
+    font-size: 3.75rem;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    margin-block-end: 0;
+    margin-block-start: 1.3em;
+}
+
+.header-main-content h2 {
+    opacity: 0.84;
+    color: #464646;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+    line-height: 56px;
+    margin-block-start: 0;
+}
+
+.header-main-content .header-main-content__buttons .header-main-content__buttons__create-account {
+    background: linear-gradient(to right, #582c7e, #7e5382);
+    box-shadow: 0px 7px 9px 0px rgba(100, 115, 151, 0.15),
+    0px 13px 21px 0px rgba(20, 80, 204, 0.27),
+    0px 13px 21px 0px rgba(0, 0, 0, 0.15),
+    0px 4px 16px 0px rgba(102, 145, 233, 0.33),
+    0px 4px 16px 0px rgba(0, 0, 0, 0.09),
+    0px 3px 9px 0px rgba(53, 103, 205, 0.09),
+    0px 3px 9px 0px rgba(0, 0, 0, 0.09),
+    0px 3px 3px 0px rgba(102, 145, 233, 0.09),
+    0px 3px 3px 0px rgba(0, 0, 0, 0.17);
+    color: #ffffff;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.18px;
+    border-radius: 50px;
+    padding: 0 40px;
+}
+
+.header-main-content .header-main-content__buttons a:nth-child(2) {
+    padding: 0 0 0 10px;
+}
+
+.header-main-content .header-main-content__buttons a:nth-child(3) {
+    padding: 0 0 0 5px;
+}
+
+.header-main-content .header-main-content__buttons .header-main-content__buttons__app-store,
+.header-main-content .header-main-content__buttons .header-main-content__buttons__google-products {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header-main-content .header-main-content__buttons .header-main-content__buttons__app-store {
+    background-image: url("assets/icons/google-products-icon.png");
+}
+
+.header-main-content .header-main-content__buttons .header-main-content__buttons__google-products {
+    background-image: url("assets/icons/apple-icon.png");
+}
+
+/* End Header Main content styles */
+
+/* End Header styles */
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Services section styles
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
+.section-services {
+    grid-template-columns: 2.4fr 2.1fr 2.4fr;
+    grid-template-rows: 100px auto auto 100px auto auto;
+    margin-block-start: 0;
+    position: relative;
+    max-width: 1400px;
+    /*grid-template-areas: ". top-left-border ."*/
+    /*                     "swiss-privacy-header double-encryption-header anonymous-email-header";*/
+    /*                     "swiss-privacy-main double-encryption-main anonymous-email-main"*/
+    /*                     ". double-encryption-main ."*/
+    /*                     ". middle-border ."*/
+    /*                     "bottom-text bottom-text ."*/
+}
+
+.section-services .section-services__top-left-border {
+    border-left: 2px solid #b9b9b9;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    /*grid-area: top-left-border;*/
+}
+
+.section-services .section-services__swiss-privacy__header {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-content: center;
+    padding-right: 34px;
+    position: relative;
+    /*grid-area: swiss-privacy-header;*/
+}
+
+.section-services .section-services__swiss-privacy__header:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    z-index: 100;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    margin-right: -2px;
+    background: #b9b9b9;
+}
+
+.section-services .section-services__double-encryption__header {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: start;
+    padding-left: 34px;
+    /*grid-area: double-encryption-header;*/
+}
+
+.section-services .section-services__anonymous-email__header {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    position: relative;
+    justify-content: start;
+    padding-left: 34px;
+    /*grid-area: anonymous-email-header;*/
+}
+
+.section-services .section-services__anonymous-email__header:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    z-index: 100;
+    top: 0;
+    width: 30%;
+    height: 2px;
+    background: #b9b9b9;
+}
+
+.section-services .section-services__swiss-privacy__header,
+.section-services .section-services__double-encryption__header,
+.section-services .section-services__anonymous-email__header {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+}
+
+.section-services .section-services__swiss-privacy__header span,
+.section-services .section-services__double-encryption__header span,
+.section-services .section-services__anonymous-email__header span {
+    grid-row: span 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.section-services .section-services__swiss-privacy__header span,
+.section-services .section-services__double-encryption__header span,
+.section-services .section-services__anonymous-email__header span {
+    width: 60px;
+    height: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section-services .section-services__swiss-privacy__header span {
+    background-image: url("assets/icons/swiss-privacy-icon.png");
+}
+
+.section-services .section-services__double-encryption__header span {
+    background-image: url("assets/icons/double-encryption-icon.png");
+}
+
+.section-services .section-services__anonymous-email__header span {
+    background-image: url("assets/icons/anonymous-email-icon.png");
+}
+
+.section-services .section-services__swiss-privacy__header h2,
+.section-services .section-services__double-encryption__header h2,
+.section-services .section-services__anonymous-email__header h2 {
+
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    color: #555555;
+    font-size: 2.25rem;
+    letter-spacing: 0.3px;
+    line-height: 37px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+}
+
+.section-services .section-services__swiss-privacy__header p,
+.section-services .section-services__double-encryption__header p,
+.section-services .section-services__anonymous-email__header p {
+    font-family: "Titillium Web", sans-serif;
+    color: #959393;
+    font-size: 18px;
+    letter-spacing: 0.18px;
+    line-height: 22px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.section-services .section-services__swiss-privacy__main p,
+.section-services .section-services__double-encryption__main p,
+.section-services .section-services__anonymous-email__main p {
+    color: #959393;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.14px;
+}
+
+.section-services .section-services__swiss-privacy__main p {
+    max-width: 358px;
+    padding-left: 2.125rem;
+    padding-right: 2.125rem;
+}
+
+.section-services .section-services__double-encryption__main p {
+    max-width: 340px;
+    padding-left: 2.8125rem;
+}
+
+.section-services .section-services__anonymous-email__main p {
+    max-width: 363px;
+    padding-left: 3.125rem;
+    padding-right: 2.125rem;
+}
+
+.section-services .section-services__swiss-privacy__main {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-inline-start: auto;
+    /*grid-area: swiss-privacy-main;*/
+}
+
+.section-services .section-services__double-encryption__main {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    border-right: 2px solid #b9b9b9;
+    margin-right: -2px;
+    /*grid-area: double-encryption-main;*/
+}
+
+.section-services .section-services__anonymous-email__main {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    /*grid-area: anonymous-email-main;*/
+}
+
+.section-services .section-services__middle-border {
+    grid-row: 4/5;
+    grid-column: 2/3;
+    border-right: 2px solid #b9b9b9;
+    margin-right: -2px;
+    /*grid-area: middle-border;*/
+}
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Section-physical-security styles
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
+
+.section-services .section-services__bottom-text {
+    grid-row: 5/6;
+    grid-column: 1/3;
+    border-right: 2px solid #b9b9b9;
+    margin-right: -2px;
+    border-bottom: 2px solid #b9b9b9;
+    /*grid-area: bottom-text;*/
+}
+
+.section-services .section-services__bottom-text h2,
+.section-services .section-services__bottom-text p {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.section-services .section-services__bottom-text h2 {
+    color: #535353;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.6px;
+    margin-block-end: 0;
+}
+
+.section-services .section-services__bottom-text p {
+    color: #959393;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.24px;
+    max-width: 622px;
+    margin-inline-start: auto;
+    margin-block-end: 2em;
+}
+
+.section-services .btn--learn-more {
+    position: absolute;
+    bottom: -5%;
+    right: 25%;
+    color: #676767;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.16px;
+    border-radius: 31px;
+    border: 1px solid #b9b9b9;
+    background-color: #ffffff;
+    padding: 15px 30px;
+}
+
+
+/* end styles section-physical-security*/
+
+
+/*  End Services section styles */
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Section customers block styles
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
+.section-customers {
+    margin-block-start: 60px;
+    margin-block-end: 60px;
+}
+
+.section-customers .section-customers__block {
+    background-image: url("assets/icons/testimonials-list.png");
+    height: 66px;
+    max-width: 50%;
+    display: block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Section customers block styles */
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+section-slider
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
+
+.section-slider {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section-slider__body {
+    grid-template-rows: auto;
+    grid-template-columns: 25px auto;
+    justify-self: end;
+    height: 100%;
+    overflow: hidden;
+}
+
+.section-slider .section-slider__body .section-slider__body__check-buttons .slider__nav {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+.section-slider .section-slider__body .section-slider__body__contents {
+    max-width: 525px;
+    height: 100%;
+    -webkit-transition: left 0.4s;
+    transition: left 0.4s;
+
+    color: #101010;
+    font-family: "Malaga OTCE - Reg Italic", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.24px;
+    line-height: 31px;
+}
+
+.section-slider .section-slider__body .section-slider__body__contents .slider__contents p {
+    margin-block-start: 0;
+    padding-left: 5px;
+}
+
+.section-slider .section-slider__body .section-slider__body__contents .slider__contents p span {
+    color: #727272;
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    line-height: 32px;
+    display: block;
+}
+
+.slider__nav:checked {
+    -webkit-animation: check 0.4s linear forwards;
+    animation: check 0.4s linear forwards;
+}
+
+input[type='radio'] {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    background-color: rgba(16, 16, 16, .3);
+}
+
+input[type='radio']:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+input[type='radio']:checked:before {
+    background: #101010;
+}
+
+@-webkit-keyframes check {
+    50% {
+        outline-color: #333;
+        box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+    }
+    100% {
+        outline-color: #333;
+        box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+    }
+}
+
+@keyframes check {
+    50% {
+        outline-color: #333;
+        box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+    }
+    100% {
+        outline-color: #333;
+        box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+    }
+}
+
+/* TODO: add slide for 3pages */
+
+/* end styles for section-slider*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+section-service-device-info
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
+
+.section-blog {
+    background: linear-gradient(175deg, #fff 18%, #fafafa 0%);
+    font-family: "Titillium Web", sans-serif;
+    position: relative;
+}
+
+.section-blog .section-blog__top-block {
+    z-index: 3;
+}
+
+.section-blog .section-blog__top-block h2 {
+    color: #535353;
+    font-size: 36px;
+    line-height: 22px;
+    letter-spacing: 0.36px;
+    padding-top: 120px;
+    max-width: 435px;
+}
+
+.section-blog .section-blog__top-block p {
+    color: #959393;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.16px;
+    max-width: 435px;
+}
+
+.section-blog .section-blog__btn-app-store {
+    background-image: url("assets/icons/app-store-download-icon.png");
+}
+
+.section-blog .section-blog__btn-google-play {
+    background-image: url("assets/icons/google-play-download-icon.png");
+}
+
+.section-blog .section-blog__btn-app-store,
+.section-blog .section-blog__btn-google-play {
+    display: inline-block;
+    width: 42%;
+    height: 55px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.section-blog .section-blog__bottom-block {
+    padding-top: 200px;
+    padding-bottom: 100px;
+
+}
+
+.section-blog .section-blog__bottom-block .section-blog__bottom-block__laptop-image {
+    background-image: url("assets/images/testimonials-device-image.png");
+    background-repeat: no-repeat;
+    z-index: 0;
+    width: 578px;
+    top: -20%;
+    height: 670px;
+    position: absolute;
+    right: 0;
+}
+
+.section-blog .section-blog__bottom-block h2 {
+    color: #535353;
+    font-size: 36px;
+    letter-spacing: 0.36px;
+    line-height: 30px;
+    margin-block-end: 0;
+}
+
+.section-blog .section-blog__bottom-block p {
+    letter-spacing: 0.29px;
+    line-height: 37px;
+    color: #7c7c7c;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 29px;
+    margin-block-start: 0.5em;
+    padding-bottom: 30px;
+}
+
+.section-blog .section-blog__bottom-block__donate__btn,
+.section-blog .section-blog__bottom-block__upgrade-btn {
+    color: #ffffff;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.18px;
+    border-radius: 50px;
+}
+
+.section-blog .section-blog__bottom-block__upgrade-btn {
+    padding: 18px 25px;
+    margin-right: 50px;
+    background: linear-gradient(to right, #582c7e, #7e5382);
+    box-shadow: 0px 7px 9px 0px rgba(100, 115, 151, 0.15),
+    0px 13px 21px 0px rgba(20, 80, 204, 0.27),
+    0px 13px 21px 0px rgba(0, 0, 0, 0.15),
+    0px 4px 16px 0px rgba(157, 221, 216, 0.29),
+    0px 4px 16px 0px rgba(0, 0, 0, 0.09),
+    0px 3px 9px 0px rgba(53, 103, 205, 0.09),
+    0px 3px 9px 0px rgba(0, 0, 0, 0.09),
+    0px 3px 3px 0px rgba(102, 145, 233, 0.09),
+    0px 3px 3px 0px rgba(0, 0, 0, 0.17);
+}
+
+.section-blog .section-blog__bottom-block__donate__btn {
+    padding: 20px 45px;
+    background: linear-gradient(to right, #3bb2e2, #5e7bea);
+    box-shadow: 2px 7px 9px 0px rgba(157, 221, 216, 0.15),
+    0px 13px 21px 0px rgba(20, 80, 204, 0.27),
+    0px 13px 21px 0px rgba(157, 221, 216, 0.15),
+    0px 4px 16px 0px rgba(157, 221, 216, 0.29),
+    0px 4px 16px 0px rgba(157, 221, 216, 0.09),
+    0px 3px 9px 0px rgba(157, 221, 216, 0.09),
+    0px 3px 9px 0px rgba(157, 221, 216, 0.09),
+    0px 3px 3px 0px rgba(157, 221, 216, 0.09),
+    0px 0 3px 0px rgba(157, 221, 216, 0.17);
+}
+
+.section-blog .section-blog__bottom-block__upgrade-btn i,
+.section-blog .section-blog__bottom-block__donate__btn i {
+    padding-right: 5px;
+}
+
+/* end styles for section-service-device-info*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+footer styles
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+ */
+
+footer {
+    background-color: #fafafa;
+}
+
+.footer-block {
+    width: 80%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+}
+
+.footer-block .footer-block__top-text {
+    color: #7a7a7a;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0.14px;
+    grid-row: 1/2;
+    justify-self: end;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    width: 100%;
+    text-align: right;
+    border-top: 2px solid #b9b9b9;
+}
+
+.footer-block .footer-block__top-text p,
+.footer-block .footer-block__top-image {
+    padding-right: 25px;
+}
+
+.footer-block .footer-block__top-image,
+.footer-block .footer-block__top-text {
+    border-right: 2px solid #b9b9b9;
+}
+
+.footer-block .footer-block__top-image {
+    grid-row: 2/3;
+    justify-self: end;
+}
+
+.footer-block .footer-block__top-image span {
+    background-image: url("assets/icons/partners-icons.png");
+    display: block;
+    width: 60vw;
+    height: 92px;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-block-end: 6.25rem;
+}
+
+.footer-block .footer-block__main {
+    grid-template-rows: auto auto;
+    grid-template-columns: 180px 2fr 1fr 1fr 1fr;
+}
+
+.footer-block .footer-block__main__general-info {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+    color: #5c5c5c;
+    grid-column: 2/3;
+    padding-left: 25px;
+    border-left: 2px solid #b9b9b9;
+}
+
+.footer-block .footer-block__main__general-info > p {
+    margin-block-start: 0;
+}
+
+.footer-block .footer-block__main__general-info p a {
+    font-weight: 700;
+    color: inherit;
+}
+
+.footer-block .footer-block__main__general-info span {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.footer-block .footer-block__main__company-info,
+.footer-block .footer-block__bottom {
+    border-right: 2px solid #b9b9b9;
+}
+
+.footer-block .footer-block__main__company-info,
+.footer-block .footer-block__main__legal-info,
+.footer-block .footer-block__main__neutronMail-info {
+    text-align: right;
+    padding-right: 25px;
+}
+
+.footer-block .footer-block__main__company-info h2,
+.footer-block .footer-block__main__legal-info h2,
+.footer-block .footer-block__main__neutronMail-info h2 {
+    color: #5c5c5c;
+    font-family: "Titillium Web", sans-serif;
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.18px;
+    margin-block-start: 0;
+}
+
+.footer-block .footer-block__main__neutronMail-info {
+    position: relative;
+}
+
+.footer-block .footer-block__main__neutronMail-info:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    z-index: 100;
+    top: 0;
+    width: 2px;
+    height: 80%;
+    background: #b9b9b9;
+}
+
+
+.footer-block .footer-block__main__company-info ul,
+.footer-block .footer-block__main__legal-info ul,
+.footer-block .footer-block__main__neutronMail-info ul,
+.footer-block .footer-block__bottom__breadcrumbs {
+    padding-inline-start: 0;
+}
+
+.footer-block .footer-block__main__company-info ul li,
+.footer-block .footer-block__main__legal-info ul li,
+.footer-block .footer-block__main__neutronMail-info ul li {
+    list-style-type: none;
+    list-style-position: inside;
+
+    color: #5c5c5c;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.14px;
+}
+
+.footer-block .footer-block__bottom {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    padding-top: 6.25rem;
+}
+
+
+.footer-block .footer-block__bottom__breadcrumbs li {
+    display: inline-block;
+    color: #5c5c5c;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.12px;
+}
+
+.footer-block .footer-block__bottom__breadcrumbs li span {
+    text-decoration: underline;
+}
+
+.footer-block .footer-block__bottom__breadcrumbs li:nth-child(1):after,
+.footer-block .footer-block__bottom__breadcrumbs li:nth-child(2):after,
+.footer-block .footer-block__bottom__breadcrumbs li:nth-child(3):after,
+.footer-block .footer-block__bottom__breadcrumbs li:nth-child(4):after {
+    padding-left: 5px;
+    content: '/';
+    list-style-type: none;
+    text-decoration: none;
+    letter-spacing: 0.12px;
+}
+
+.footer-block .footer-block__bottom p {
+    color: #5c5c5c;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.12px;
+}
+
+.footer-block .footer-block__main__company-info ul li span,
+.footer-block .footer-block__main__legal-info ul li span,
+.footer-block .footer-block__main__neutronMail-info ul li span {
+    color: #5c5c5c;
+    font-size: 4px;
+    padding-left: 7px;
+    vertical-align: middle;
+}
+
+/* end footer styles */
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+M E D I A  Q U E R I E S
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+*/
+/* Extra small devices (portrait phones, less than 576px) */
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .header-navbar {
+        width: 90%;
+    }
+
+    .header-navbar .header-navbar__links-group nav ul .nav-item .nav-link,
+    .header-navbar .header-navbar__links-group .header-navbar__links-group__buttons .nav-item .nav-link {
+        font-size: 12px;
+    }
+
+    .header-navbar .header-navbar__links-group nav ul {
+        margin-inline-start: 0;
+        max-width: 100%;
+    }
+
+    .header-navbar .header-navbar__links-group {
+        grid-template-columns: minmax(140px, 158px) 1fr minmax(150px, 160px);
+    }
+
+    .header-navbar .header-navbar__links-group ul {
+        padding-inline-start: 0;
+    }
+
+    .section-services {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto 15px;
+    }
+
+    .section-services .section-services__swiss-privacy__header {
+        justify-content: start;
+        padding-right: 0;
+    }
+
+    .section-services .section-services__double-encryption__header span {
+        padding-right: 15px;
+    }
+
+    .section-services .section-services__anonymous-email__header {
+        padding-left: 0;
+    }
+
+    .section-services .section-services__double-encryption__header {
+        padding-left: 0;
+    }
+
+    .section-services .section-services__swiss-privacy__header p,
+    .section-services .section-services__double-encryption__header p,
+    .section-services .section-services__anonymous-email__header p {
+        font-size: 15px;
+    }
+
+    .section-services .section-services__swiss-privacy__header h2,
+    .section-services .section-services__double-encryption__header h2,
+    .section-services .section-services__anonymous-email__header h2 {
+        font-size: 25px;
+    }
+
+    .section-services .section-services__swiss-privacy__main p {
+        padding-right: 15px;
+    }
+
+    .section-services .section-services__double-encryption__main p {
+        padding-left: 0;
+    }
+
+    .section-services .section-services__anonymous-email__main p {
+        padding-left: 15px;
+    }
+
+    .section-services .section-services__bottom-text h2 {
+        font-size: 45px;
+    }
+
+    .section-services .section-services__bottom-text p {
+        font-size: 18px;
+    }
+
+    .section-customers .section-customers__block {
+        max-width: 55%;
+    }
+
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .section-blog .section-blog__bottom-block .section-blog__bottom-block__laptop-image {
+        z-index: 0;
+        width: 578px;
+        top: -15%;
+        height: 670px;
+        position: absolute;
+        right: 0;
+    }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (max-width: 767px) {
+    .hidden-sm {
+        display: none;
+    }
+
+    .section-blog .section-blog__bottom-block .section-blog__bottom-block__laptop-image {
+        display: none;
+    }
+
+    /*Menu*/
+    .sm-menu-btn {
+        display: block;
+        position: fixed;
+        width: 20px;
+        height: 20px;
+
+        right: 5px;
+        top: 60px;
+    }
+
+    .sm-menu-btn span,
+    .sm-menu-btn span:before,
+    .sm-menu-btn span:after {
+        display: block;
+        height: 2px;
+        width: 20px;
+        background: #333;
+        position: absolute;
+        left: 50%;
+        margin-left: -10px;
+        top: 50%;
+        margin-top: -1px;
+        transition: all 0.1s;
+    }
+
+    .sm-menu-btn span:before {
+        margin-top: -6px;
+        content: '';
+        transition: all 0.3s;
+    }
+
+    .sm-menu-btn span:after {
+        margin-top: 4px;
+        content: '';
+        transition: all 0.3s;
+    }
+
+    .menu-btn-active span {
+        background: transparent;
+
+    }
+
+    .menu-btn-active span:before {
+        transform: rotate(135deg);
+        margin-top: 0px;
+        background: #fff;
+    }
+
+    .menu-btn-active span:after {
+        transform: rotate(-135deg);
+        margin-top: 0px;
+        background: #fff;
+    }
+
+    .sm-menu {
+        display: flex;
+        left: -100vw;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: all 0.3s;
+
+    }
+
+    .sm-menu ul {
+        flex-basis: 30%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: #fff;
+    }
+
+    .sm-menu ul a {
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    .sm-menu-active {
+
+        left: 0vw;
+    }
+
+    .header-navbar {
+        width: 90%;
+    }
+
+    .header-navbar .header-navbar__links-group {
+        display: grid;
+        grid-template-columns: minmax(120px, 130px) 1fr;
+        grid-template-rows: 1fr;
+        grid-area: links-group;
+    }
+
+    .header-navbar .header-navbar__links-group__buttons {
+        padding-inline-start: 0;
+        font-size: 12px;
+        justify-self: end;
+    }
+
+    .header-main-content .header-main-content__buttons .header-main-content__buttons__create-account {
+        font-size: 12px;
+        padding: 0px 30px;
+    }
+
+    .section-services {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas: "." "swiss-privacy-header" "swiss-privacy-main" "double-encryption-header" "double-encryption-main" "anonymous-email-header" "anonymous-email-main" "bottom-text";
+        margin-block-start: 2em;
+        padding-left: 2.125rem;
+        padding-right: 2.125rem;
+        justify-content: start;
+    }
+
+    .section-services .section-services__swiss-privacy__header {
+        grid-area: swiss-privacy-header;
+    }
+
+    .section-services .section-services__double-encryption__header {
+        grid-area: double-encryption-header;
+        border-top: 2px solid #b9b9b9;
+        width: 100%;
+    }
+
+    .section-services .section-services__anonymous-email__header {
+        grid-area: anonymous-email-header;
+    }
+
+    .section-services .section-services__anonymous-email__header:after {
+        right: -2px;
+    }
+
+    .section-services .section-services__swiss-privacy__main {
+        grid-area: swiss-privacy-main;
+    }
+
+    .section-services .section-services__double-encryption__main {
+        grid-area: double-encryption-main;
+    }
+
+    .section-services .section-services__anonymous-email__main {
+        grid-area: anonymous-email-main;
+    }
+
+    .section-services .section-services__bottom-text {
+        grid-area: bottom-text;
+    }
+
+    .section-services .section-services__middle-border {
+        margin-right: 0;
+    }
+
+    .section-services .section-services__swiss-privacy__header,
+    .section-services .section-services__double-encryption__header,
+    .section-services .section-services__anonymous-email__header,
+    .section-services .section-services__swiss-privacy__main p,
+    .section-services .section-services__double-encryption__main p,
+    .section-services .section-services__anonymous-email__main p {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .section-services .section-services__swiss-privacy__header,
+    .section-services .section-services__double-encryption__header,
+    .section-services .section-services__anonymous-email__header {
+        justify-content: start;
+    }
+
+    .section-services .section-services__swiss-privacy__header p,
+    .section-services .section-services__double-encryption__header p,
+    .section-services .section-services__anonymous-email__header p {
+        font-size: 14px;
+    }
+
+    .section-services .section-services__swiss-privacy__main p,
+    .section-services .section-services__double-encryption__main p,
+    .section-services .section-services__anonymous-email__main p {
+        max-width: 100%;
+    }
+
+    .section-services .section-services__swiss-privacy__header span,
+    .section-services .section-services__double-encryption__header span,
+    .section-services .section-services__anonymous-email__header span {
+        width: 40px;
+        height: 40px;
+    }
+
+    .section-services .section-services__swiss-privacy__header h2,
+    .section-services .section-services__double-encryption__header h2,
+    .section-services .section-services__anonymous-email__header h2 {
+        font-size: 24px;
+    }
+
+    .section-services .section-services__bottom-text p {
+        font-size: 18px;
+    }
+
+    .section-customers .section-customers__block {
+        max-width: 100%;
+    }
+
+    .section-slider {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    h1 {
+        font-size: 2.8125rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-services .section-services__bottom-text h2 {
+        line-height: 45px;
+    }
+
+    .footer-block {
+        width: 100vw;
+    }
+
+    .footer-block .footer-block__top-image span {
+        margin-block-end: 3.125rem;
+    }
+
+    .footer-block .footer-block__main {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .footer-block .footer-block__main .footer-block__main__general-info {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        border-left: none;
+        border-top: 2px solid #b9b9b9;
+        border-right: 2px solid #b9b9b9;
+        border-bottom: 2px solid #b9b9b9;
+        border-left: none;
+    }
+
+    .footer-block .footer-block__main .footer-block__main__company-info {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .footer-block .footer-block__main .footer-block__main__legal-info {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding-top: 25px;
+    }
+
+    .footer-block .footer-block__main .footer-block__main__neutronMail-info {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding-top: 25px;
+    }
+
+    .footer-block .footer-block__bottom {
+        grid-column: span 2;
+        grid-row: 3/4;
+        padding-top: 3.125rem;
+        padding-left: 25px;
+    }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .header-main-content {
+        text-align: center;
+        margin-top: 24vw;
+    }
+
+    h1 {
+        font-size: 1.875rem;
+
+    }
+
+    .header-main-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-services .section-services__bottom-text h2 {
+        font-size: 2.5rem;
+        line-height: 30px;
+    }
+
+    .footer-block {
+        width: 100vw;
+    }
+
+    .footer-block .footer-block__top-image span {
+        margin-block-end: 3.125rem;
+    }
+
+    .footer-block .footer-block__main {
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .footer-block .footer-block__main .footer-block__main__general-info {
+        grid-column: span 2;
+        grid-row: 1/2;
+        border-left: none;
+        border-top: 2px solid #b9b9b9;
+        border-right: 2px solid #b9b9b9;
+        border-bottom: 2px solid #b9b9b9;
+        border-left: none;
+        padding-left: 2px;
+    }
+
+    .footer-block .footer-block__main .footer-block__main__company-info {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .footer-block .footer-block__main .footer-block__main__legal-info {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .footer-block .footer-block__main .footer-block__main__neutronMail-info {
+        grid-column: span 1;
+        grid-row: 3/4;
+        padding-top: 25px;
+    }
+
+    .footer-block .footer-block__main__neutronMail-info:after {
+        position: absolute;
+        content: "";
+        right: 0;
+        z-index: 100;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: #b9b9b9;
+    }
+
+
+    .footer-block .footer-block__bottom {
+        grid-column: span 1;
+        grid-row: 3/4;
+        padding-top: 8px;
+        border-right: none;
+        padding-right: 25px;
+        padding-left: 5px;
+    }
+
+    .footer-block .footer-block__main__company-info,
+    .footer-block .footer-block__main__legal-info,
+    .footer-block .footer-block__main__neutronMail-info {
+        padding-left: 5px;
+        text-align: left;
+    }
+
+    .footer-block ul li,
+    .footer-block p {
+        font-size: 12px;
+    }
+
+
+}
+
+@media (max-width: 360px) {
+    .hidden-xs {
+        display: none;
+    }
+
+    .section-blog .section-blog__bottom-block__donate__btn, .section-blog .section-blog__bottom-block__upgrade-btn {
+        font-size: 10px;
+    }
+
+    .section-blog .section-blog__bottom-block__upgrade-btn {
+        margin-right: 5px;
+    }
+}
+

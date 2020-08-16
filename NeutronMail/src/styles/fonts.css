@@ -1,0 +1,17 @@
+/* TODO: Create custom font file for this font*/
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
+@font-face {
+    font-family: 'Titillium Web - Semi Bold';
+    src: url('../assets/fonts/titillium-web.semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Malaga OTCE - Reg Italic';
+    src: url('../assets/fonts/malaga-OT-reg-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
