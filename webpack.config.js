@@ -7,7 +7,6 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
     filename: 'index.html',
     inject: 'body'
 });
-// const webpack = require('webpack');
 
 module.exports = {
     entry:
@@ -53,7 +52,6 @@ module.exports = {
     },
     plugins: [
         HTMLWebpackPluginConfig,
-        // new HtmlWebpackPlugin({hash: true, template: './src/index.html', filename: './dist/index.html'}),
         new CleanWebpackPlugin()
     ],
     devServer: {
